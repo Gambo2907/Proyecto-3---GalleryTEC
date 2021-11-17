@@ -13,7 +13,12 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(Proyecto_3_GalleryTEC main.cpp)
+add_executable(Proyecto_3_GalleryTEC
+        main.cpp
+        window.cpp
+        window.h
+        window.ui
+        )
 target_link_libraries(Proyecto_3_GalleryTEC
         Qt5::Core
         Qt5::Gui
