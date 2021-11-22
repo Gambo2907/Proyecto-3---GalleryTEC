@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "registerdialog.h"
-#include "galerydialog.h"
+#include "galleriesdialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -23,7 +23,7 @@ private slots:
     void on_pushButton_signIn_clicked();
 
 private:
-    GaleryDialog *galeryWindow;
+    GalleriesDialog *galleriesWindow;
     RegisterDialog *registerWindow;
     Ui::MainWindow *ui;
 };

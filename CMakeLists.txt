@@ -20,9 +20,9 @@ add_executable(Proyecto_3_GalleryTEC
         registerdialog.cpp
         registerdialog.h
         registerdialog.ui
-        galerydialog.cpp
-        galerydialog.h
-        galerydialog.ui
+        galleriesdialog.cpp
+        galleriesdialog.h
+        galleriesdialog.ui
         )
 target_link_libraries(Proyecto_3_GalleryTEC
         Qt5::Core

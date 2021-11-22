@@ -23,6 +23,6 @@ void MainWindow::on_pushButton_register_clicked()
 void MainWindow::on_pushButton_signIn_clicked()
 {
     hide();
-    galeryWindow = new GaleryDialog(this);
-    galeryWindow->show();
+    galleriesWindow = new GalleriesDialog(this);
+    galleriesWindow->show();
 }
