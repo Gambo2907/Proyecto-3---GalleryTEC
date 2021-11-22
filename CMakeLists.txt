@@ -6,7 +6,6 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-
 find_package(Qt5 COMPONENTS
         Core
         Gui
@@ -15,9 +14,15 @@ find_package(Qt5 COMPONENTS
 
 add_executable(Proyecto_3_GalleryTEC
         main.cpp
-        window.cpp
-        window.h
-        window.ui
+        mainwindow.cpp
+        mainwindow.h
+        mainwindow.ui
+        registerdialog.cpp
+        registerdialog.h
+        registerdialog.ui
+        galerydialog.cpp
+        galerydialog.h
+        galerydialog.ui
         )
 target_link_libraries(Proyecto_3_GalleryTEC
         Qt5::Core
