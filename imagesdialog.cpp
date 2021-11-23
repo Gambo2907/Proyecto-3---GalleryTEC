@@ -1,11 +1,18 @@
 #include "imagesdialog.h"
 #include "ui_imagesdialog.h"
-
+#include <QDir>
 ImagesDialog::ImagesDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ImagesDialog)
 {
     ui->setupUi(this);
+    QDir dir (":/GitHub/Proyecto-3-GalleryTEC/imgs");
+    foreach(QFileInfo var, dir.entryInfoList()){
+        if(var.isFile()) {
+            ui->listWidget_images->addItem(var.fileName());
+        }
+
+    }
 }
 
 ImagesDialog::~ImagesDialog()
