@@ -19,6 +19,10 @@ public:
 private slots:
     void on_pushButton_GSelect_clicked();
 
+
+
+    void on_pushButton_Gback_clicked();
+
 private:
     ImagesDialog *imageWindow;
     Ui::GalleriesDialog *ui;

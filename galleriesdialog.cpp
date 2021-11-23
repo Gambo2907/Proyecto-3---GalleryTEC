@@ -19,3 +19,11 @@ void GalleriesDialog::on_pushButton_GSelect_clicked()
     imageWindow = new ImagesDialog(this);
     imageWindow->show();
 }
+
+
+
+void GalleriesDialog::on_pushButton_Gback_clicked()
+{
+    hide();
+    parentWidget()->show();
+}

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Images</string>
+   <string>Gallery TEC</string>
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog#ImagesDialog{
@@ -31,6 +31,10 @@ background: white;
 color: black
 }
 QPushButton#pushButton_IEdit{
+background: white;
+color: black
+}
+QPushButton#pushButton_Iback{
 background: white;
 color: black
 }
@@ -122,6 +126,19 @@ background: white
    </property>
    <property name="text">
     <string>Edit</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Iback">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>550</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back</string>
    </property>
   </widget>
  </widget>

@@ -12,3 +12,18 @@ ImagesDialog::~ImagesDialog()
 {
     delete ui;
 }
+
+void ImagesDialog::on_pushButton_ISelect_clicked()
+{
+    hide();
+    visualizerWindow = new VisualizerDialog(this);
+    visualizerWindow->show();
+}
+
+
+
+void ImagesDialog::on_pushButton_Iback_clicked()
+{
+    hide();
+    parentWidget()->show();
+}

@@ -89,7 +89,7 @@ background: white
       </font>
      </property>
      <property name="text">
-      <string>Log into Galery TEC</string>
+      <string>Log into Gallery TEC</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_question">
@@ -178,6 +178,9 @@ background: white
      <property name="text">
       <string/>
      </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
     </widget>
    </widget>
    <widget class="QLabel" name="label_title">
@@ -195,7 +198,7 @@ background: white
      </font>
     </property>
     <property name="text">
-     <string>Galery TEC</string>
+     <string>Gallery TEC</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_subtitle">

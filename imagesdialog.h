@@ -2,6 +2,7 @@
 #define IMAGESDIALOG_H
 
 #include <QDialog>
+#include "visualizerdialog.h"
 
 namespace Ui {
 class ImagesDialog;
@@ -15,7 +16,15 @@ public:
     explicit ImagesDialog(QWidget *parent = nullptr);
     ~ImagesDialog();
 
+private slots:
+    void on_pushButton_ISelect_clicked();
+
+
+
+    void on_pushButton_Iback_clicked();
+
 private:
+    VisualizerDialog *visualizerWindow;
     Ui::ImagesDialog *ui;
 };
 
