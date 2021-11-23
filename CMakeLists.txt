@@ -23,6 +23,9 @@ add_executable(Proyecto_3_GalleryTEC
         galleriesdialog.cpp
         galleriesdialog.h
         galleriesdialog.ui
+        imagesdialog.cpp
+        imagesdialog.h
+        imagesdialog.ui
         )
 target_link_libraries(Proyecto_3_GalleryTEC
         Qt5::Core

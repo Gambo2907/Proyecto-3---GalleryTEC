@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>GalleriesDialog</class>
- <widget class="QDialog" name="GalleriesDialog">
+ <class>ImagesDialog</class>
+ <widget class="QDialog" name="ImagesDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,40 +11,76 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Galleries</string>
+   <string>Images</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QDialog#GalleriesDialog{
+   <string notr="true">QDialog#ImagesDialog{
 background: white
 } 
 
-QPushButton#pushButton_GSelect{
+QPushButton#pushButton_ISelect{
 background: white;
 color: black
 }
-QPushButton#pushButton_GDelete{
+QPushButton#pushButton_IDelete{
 background: white;
 color: black
 }
-QPushButton#pushButton_GAdd{
+QPushButton#pushButton_IAdd{
 background: white;
 color: black
 }
-QPushButton#pushButton_GEdit{
-background: white;
-color: black
-}
-
-QLabel#label_Gtitle{
+QPushButton#pushButton_IEdit{
 background: white;
 color: black
 }
 
-QListWidget#listWidget_galleries{
+QLabel#label_Ititle{
+background: white;
+color: black
+}
+
+QListWidget#listWidget_images{
 background: white
 }</string>
   </property>
-  <widget class="QLabel" name="label_Gtitle">
+  <widget class="QListWidget" name="listWidget_images">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>511</width>
+     <height>381</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_ISelect">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>110</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Select</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_IDelete">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>110</y>
+     <width>80</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_Ititle">
    <property name="geometry">
     <rect>
      <x>280</x>
@@ -59,46 +95,10 @@ background: white
     </font>
    </property>
    <property name="text">
-    <string>My Galleries</string>
+    <string>My Images</string>
    </property>
   </widget>
-  <widget class="QListWidget" name="listWidget_galleries">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>140</y>
-     <width>511</width>
-     <height>381</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_GSelect">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>110</y>
-     <width>80</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Select</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_GDelete">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>110</y>
-     <width>80</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Delete</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_GAdd">
+  <widget class="QPushButton" name="pushButton_IAdd">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -111,7 +111,7 @@ background: white
     <string>Add</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_GEdit">
+  <widget class="QPushButton" name="pushButton_IEdit">
    <property name="geometry">
     <rect>
      <x>210</x>

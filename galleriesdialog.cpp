@@ -12,3 +12,10 @@ GalleriesDialog::~GalleriesDialog()
 {
     delete ui;
 }
+
+void GalleriesDialog::on_pushButton_GSelect_clicked()
+{
+    hide();
+    imageWindow = new ImagesDialog(this);
+    imageWindow->show();
+}
