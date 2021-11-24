@@ -23,13 +23,15 @@ void MainWindow::on_pushButton_register_clicked()
 {
     hide();
     registerWindow = new RegisterDialog(this);
+    registerWindow->setHandler(mainHandler);
     registerWindow->show();
 }
 
 void MainWindow::on_pushButton_signIn_clicked()
 {
-    if(mainHandler->findElementFromUserColl("username",ui->lineEdit_username->text().toStdString()) &&
-            mainHandler->findElementFromUserColl("password",ui->lineEdit_password->text().toStdString())){
+    bool userExist = mainHandler->findElementFromUserColl("username",ui->lineEdit_username->text().toStdString());
+    bool passwordExist = mainHandler->findElementFromUserColl("password",ui->lineEdit_password->text().toStdString());
+    if( userExist && passwordExist){
         qDebug() << "Ingresando.....";
         hide();
         galleriesWindow = new GalleriesDialog(this);

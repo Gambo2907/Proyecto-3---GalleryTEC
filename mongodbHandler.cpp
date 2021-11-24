@@ -13,6 +13,8 @@ bool MongodbHandler::addUserToDb(const string username, const string password) {
     bsoncxx::document::value doc_to_add = builder
             << "username" << username
             << "password" << password
+            << "galleries" << bsoncxx::builder::stream::open_array
+            << close_array
             << bsoncxx::builder::stream::finalize;
 
     userColl.insert_one(doc_to_add.view());

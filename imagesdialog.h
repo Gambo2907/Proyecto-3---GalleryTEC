@@ -17,11 +17,10 @@ public:
     ~ImagesDialog();
 
 private slots:
-    void on_pushButton_ISelect_clicked();
-
-
 
     void on_pushButton_Iback_clicked();
+
+    void on_pushButton_IVisualizer_clicked();
 
 private:
     VisualizerDialog *visualizerWindow;
