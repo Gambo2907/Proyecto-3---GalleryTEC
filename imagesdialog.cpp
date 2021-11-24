@@ -1,9 +1,11 @@
 #include "imagesdialog.h"
 #include "ui_imagesdialog.h"
+#include <QFileDialog>
 
 ImagesDialog::ImagesDialog(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::ImagesDialog)
+    ui(new Ui::ImagesDialog),
+    imageOperations()
 {
     ui->setupUi(this);
 }
@@ -23,6 +25,21 @@ void ImagesDialog::on_pushButton_Iback_clicked()
 {
     hide();
     parentWidget()->show();
+}
+
+void ImagesDialog::on_pushButton_IAdd_clicked()
+{
+    //abrir el directorio para obtener la ruta de alguna imagen png
+    QPixmap image;
+    QImage *objetoImagen;
+    std::string directory = "/home/juanda/CLionProjects/Proyecto-3-GalleryTEC/imgs";
+    const QString rutaImagen = QFileDialog::getOpenFileName(this,tr("Select Image"), QString::fromStdString(directory) ,"Images (*.png)");
+    objetoImagen = new QImage();
+    objetoImagen->load(rutaImagen);
+    image= QPixmap::fromImage(*objetoImagen);
+
+    QList<int> bytesArray = imageOperations->convertImgToBytesArray(image);
+    imageOperations->convertBytesArrayToImg(bytesArray);
 }
 
 

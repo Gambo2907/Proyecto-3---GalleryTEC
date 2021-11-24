@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "visualizerdialog.h"
+#include "imageOperations.h"
 
 namespace Ui {
 class ImagesDialog;
@@ -22,7 +23,10 @@ private slots:
 
     void on_pushButton_IVisualizer_clicked();
 
+    void on_pushButton_IAdd_clicked();
+
 private:
+    ImageOperations *imageOperations;
     VisualizerDialog *visualizerWindow;
     Ui::ImagesDialog *ui;
 };
