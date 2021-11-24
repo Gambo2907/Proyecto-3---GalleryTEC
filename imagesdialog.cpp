@@ -1,19 +1,13 @@
 #include "imagesdialog.h"
 #include "ui_imagesdialog.h"
-#include <QDir>
 #include <QFileDialog>
+
 ImagesDialog::ImagesDialog(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::ImagesDialog)
+        QDialog(parent),
+        ui(new Ui::ImagesDialog),
+        imageOperations()
 {
     ui->setupUi(this);
-    QDir dir (":/GitHub/Proyecto-3-GalleryTEC/imgs");
-    foreach(QFileInfo var, dir.entryInfoList()){
-        if(var.isFile()) {
-            ui->listWidget_images->addItem(var.fileName());
-        }
-
-    }
 }
 
 ImagesDialog::~ImagesDialog()
@@ -35,13 +29,19 @@ void ImagesDialog::on_pushButton_Iback_clicked()
 
 void ImagesDialog::on_pushButton_IAdd_clicked()
 {
-    QPixmap imagen;
+    //abrir el directorio para obtener la ruta de alguna imagen png
+    QPixmap image;
     QImage *objetoImagen;
-    const QString rutaImagen = QFileDialog::getOpenFileName(this,tr("Seleccione una imagen"),"/imgs","Images (*.png)");
+    std::string directory = "/home/juanda/CLionProjects/Proyecto-3-GalleryTEC/imgs";
+    const QString rutaImagen = QFileDialog::getOpenFileName(this,tr("Select Image"), QString::fromStdString(directory) ,"Images (*.png)");
     objetoImagen = new QImage();
     objetoImagen->load(rutaImagen);
-    //imagen= QPixmap::fromImage(*objetoImagen);
+    image= QPixmap::fromImage(*objetoImagen);
+
+    QList<int> bytesArray = imageOperations->convertImgToBytesArray(image);
+    imageOperations->convertBytesArrayToImg(bytesArray);
 }
+
 
 
 //#include "imagesdialog.h"
@@ -62,4 +62,3 @@ void ImagesDialog::on_pushButton_IAdd_clicked()
 //}
 //
 //ImagesDialog::~ImagesDialog()
-
