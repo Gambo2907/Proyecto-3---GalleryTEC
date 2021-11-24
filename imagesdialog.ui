@@ -18,7 +18,7 @@
 background: white
 } 
 
-QPushButton#pushButton_ISelect{
+QPushButton#pushButton_IVisualizer{
 background: white;
 color: black
 }
@@ -44,9 +44,28 @@ background: white;
 color: black
 }
 
-QListWidget#listWidget_images{
+QListWidget{
 background: white
-}</string>
+}
+QListView{
+background: white
+}
+QFileDialog {
+background: white
+}
+QPushButton{
+background: white;
+color: black
+}
+QLabel{
+background: white;
+color: black
+}
+QTreeView{
+background: white
+}
+
+</string>
   </property>
   <widget class="QListWidget" name="listWidget_images">
    <property name="geometry">

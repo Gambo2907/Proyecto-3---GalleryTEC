@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
     mongocxx::instance instance;
     MongodbHandler mainHandler;
 
-    //app
+    //App
     QApplication a(argc, argv);
     MainWindow w;
     w.setHandler(&mainHandler);

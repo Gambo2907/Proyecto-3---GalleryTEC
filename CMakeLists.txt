@@ -35,7 +35,7 @@ add_executable(Proyecto_3_GalleryTEC
         visualizerdialog.h
         visualizerdialog.ui
         mongodbHandler.cpp
-        mongodbHandler.h)
+        mongodbHandler.h imageOperations.cpp imageOperations.h)
 target_link_libraries(Proyecto_3_GalleryTEC
         Qt5::Core
         Qt5::Gui
