@@ -22,6 +22,7 @@ private slots:
 
     void on_pushButton_IVisualizer_clicked();
 
+    void on_pushButton_IAdd_clicked();
 private:
     VisualizerDialog *visualizerWindow;
     Ui::ImagesDialog *ui;

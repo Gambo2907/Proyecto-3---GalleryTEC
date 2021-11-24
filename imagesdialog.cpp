@@ -1,6 +1,7 @@
 #include "imagesdialog.h"
 #include "ui_imagesdialog.h"
 #include <QDir>
+#include <QFileDialog>
 ImagesDialog::ImagesDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ImagesDialog)
@@ -32,6 +33,15 @@ void ImagesDialog::on_pushButton_Iback_clicked()
     parentWidget()->show();
 }
 
+void ImagesDialog::on_pushButton_IAdd_clicked()
+{
+    QPixmap imagen;
+    QImage *objetoImagen;
+    const QString rutaImagen = QFileDialog::getOpenFileName(this,tr("Seleccione una imagen"),"/imgs","Images (*.png)");
+    objetoImagen = new QImage();
+    objetoImagen->load(rutaImagen);
+    //imagen= QPixmap::fromImage(*objetoImagen);
+}
 
 
 //#include "imagesdialog.h"
