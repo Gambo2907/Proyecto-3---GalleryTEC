@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "registerdialog.h"
 #include "galleriesdialog.h"
+#include "mongodbHandler.h"
 
 namespace Ui {
 class MainWindow;
@@ -16,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void setHandler(MongodbHandler *handler);
 
 private slots:
     void on_pushButton_register_clicked();
@@ -23,6 +25,7 @@ private slots:
     void on_pushButton_signIn_clicked();
 
 private:
+    MongodbHandler *mainHandler;
     GalleriesDialog *galleriesWindow;
     RegisterDialog *registerWindow;
     Ui::MainWindow *ui;

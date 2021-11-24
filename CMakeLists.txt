@@ -12,6 +12,11 @@ find_package(Qt5 COMPONENTS
         Widgets
         REQUIRED)
 
+find_package(mongocxx REQUIRED)
+find_package(bsoncxx REQUIRED)
+include_directories(${LIBMONGOCXX_INCLUDE_DIR})
+include_directories(${LIBBSONCXX_INCLUDE_DIR})
+
 add_executable(Proyecto_3_GalleryTEC
         main.cpp
         mainwindow.cpp
@@ -29,10 +34,13 @@ add_executable(Proyecto_3_GalleryTEC
         visualizerdialog.cpp
         visualizerdialog.h
         visualizerdialog.ui
-        )
+        mongodbHandler.cpp
+        mongodbHandler.h)
 target_link_libraries(Proyecto_3_GalleryTEC
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
+        mongo::bsoncxx_shared
+        mongo::mongocxx_shared
         )
 

@@ -58,23 +58,23 @@ background: white
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_ISelect">
+  <widget class="QPushButton" name="pushButton_IVisualizer">
    <property name="geometry">
     <rect>
-     <x>30</x>
+     <x>450</x>
      <y>110</y>
      <width>80</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>Select</string>
+    <string>Visualizer</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_IDelete">
    <property name="geometry">
     <rect>
-     <x>300</x>
+     <x>200</x>
      <y>110</y>
      <width>80</width>
      <height>23</height>
@@ -105,7 +105,7 @@ background: white
   <widget class="QPushButton" name="pushButton_IAdd">
    <property name="geometry">
     <rect>
-     <x>120</x>
+     <x>20</x>
      <y>110</y>
      <width>80</width>
      <height>23</height>
@@ -118,7 +118,7 @@ background: white
   <widget class="QPushButton" name="pushButton_IEdit">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>110</x>
      <y>110</y>
      <width>80</width>
      <height>23</height>
