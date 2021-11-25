@@ -22,6 +22,7 @@ add_executable(Proyecto_3_GalleryTEC
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        resource.qrc
         registerdialog.cpp
         registerdialog.h
         registerdialog.ui

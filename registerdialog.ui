@@ -66,6 +66,9 @@ color: black
    <property name="text">
     <string/>
    </property>
+   <property name="pixmap">
+    <pixmap>imgs/image1.jpg</pixmap>
+   </property>
   </widget>
   <widget class="QFrame" name="frame">
    <property name="geometry">
@@ -201,6 +204,9 @@ color: black
    </property>
    <property name="text">
     <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>imgs/carpeta1.jpg</pixmap>
    </property>
   </widget>
   <widget class="QLabel" name="label_3">
