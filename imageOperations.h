@@ -30,6 +30,8 @@ public:
      * @param bytesArray arreglo con los bytes de la imagen.
      */
     void convertBytesArrayToImg(QList<int> bytesArray);
+    QList<QList<int>> divideListArray(QList<int> bytesArray);
+    QList<int> calculateParity(QList<QList<int>> bytesTriplet);
 
 private:
 

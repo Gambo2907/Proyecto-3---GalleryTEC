@@ -40,6 +40,7 @@ void ImagesDialog::on_pushButton_IAdd_clicked()
 
     QList<int> bytesArray = imageOperations->convertImgToBytesArray(image);
     imageOperations->convertBytesArrayToImg(bytesArray);
+    QList<QList<int>> dividedArray = imageOperations->divideListArray(bytesArray);
 }
 
 

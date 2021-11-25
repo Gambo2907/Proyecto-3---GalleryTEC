@@ -15,6 +15,7 @@
 #include <bsoncxx/json.hpp>
 #include <mongocxx/client.hpp>
 #include <mongocxx/stdx.hpp>
+#include <mongocxx/client_session.hpp>
 #include <mongocxx/uri.hpp>
 #include <mongocxx/instance.hpp>
 #include <bsoncxx/builder/stream/helpers.hpp>
@@ -27,8 +28,10 @@ using bsoncxx::builder::stream::finalize;
 using bsoncxx::builder::stream::open_array;
 using bsoncxx::builder::stream::open_document;
 
-
 using namespace std;
+using namespace mongocxx;
+using namespace bsoncxx::builder::basic;
+using namespace bsoncxx::builder::stream;
 /**
  * @brief The MongodbHandler class permite el manejo de la base de datos.
  */
@@ -52,7 +55,15 @@ public:
      * @return true
      */
     bool findElementFromUserColl(const string field, const string value);
-    //(falta el tipo de dato que retorna) getGalleriesOfAUser(const string username);
+
+    bool addGallery(const string galleryName, const string username);
+    vector<string> getUserGalleries(const string username);
+    bool deleteGallery(const string username, const string galleryName); //no funciona
+    bool addImage(const string username,const string galleryName,const string imageName);
+    bool deleteImage(const string galleryName, const string imgName, const string username);
+    vector<string> getGalleryImages(const string username, const string galleryName);
+    bool setImageMetadata(const string Name, const string gallery, const string field,const string newValue, const string username);
+    vector<string> getImageMetadata(const string Name, const string gallery, const string username);
 
 private:
     /**
