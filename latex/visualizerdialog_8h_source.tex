@@ -1,0 +1,49 @@
+\hypertarget{visualizerdialog_8h_source}{}\doxysection{visualizerdialog.\+h}
+\mbox{\hyperlink{visualizerdialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef VISUALIZERDIALOG\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define VISUALIZERDIALOG\_H}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{imageOperations_8h}{imageOperations.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mongodbHandler_8h}{mongodbHandler.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{metadatadialog_8h}{metadatadialog.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{classVisualizerDialog}{VisualizerDialog}};}
+\DoxyCodeLine{19 \}}
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{classVisualizerDialog}{VisualizerDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     Q\_OBJECT}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     \textcolor{keyword}{explicit} \mbox{\hyperlink{classVisualizerDialog_a9d3deb95d3e436762a92d1f53758f839}{VisualizerDialog}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{34     \mbox{\hyperlink{classVisualizerDialog}{\string~VisualizerDialog}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVisualizerDialog_a2187bca07401b8a0b80f11a984ff8d98}{setHandler}}(\mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *handler);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVisualizerDialog_af5c0ed8f4db75939e831067b092ac51d}{setUserName}}(\textcolor{keywordtype}{string} username);}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVisualizerDialog_abc2c4271f0a1994158708cb7b3ece206}{setGalleryName}}(\textcolor{keywordtype}{string} galleryname);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVisualizerDialog_a264ece2ab8ed6a8c2f1c146c1709420c}{showContent}}();}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVisualizerDialog_aa551076dc7321690cc97e230752267a7}{setLength}}(\textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{63     \textcolor{keywordtype}{void} \mbox{\hyperlink{classVisualizerDialog_a84bb9d54e64715214213284bbca8c593}{setImagesVector}}(std::vector<string> images);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{69     \textcolor{keywordtype}{void} on\_pushButton\_list\_clicked();}
+\DoxyCodeLine{73     \textcolor{keywordtype}{void} on\_pushButton\_back\_clicked();}
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} on\_pushButton\_next\_clicked();}
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} on\_pushButton\_metadata\_clicked();}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{keyword}{private}:}
+\DoxyCodeLine{87     std::vector<string> images;}
+\DoxyCodeLine{91     \textcolor{keywordtype}{int} length;}
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} length\_aux;}
+\DoxyCodeLine{99     \textcolor{keywordtype}{string} username;}
+\DoxyCodeLine{103     \textcolor{keywordtype}{string} galleryname;}
+\DoxyCodeLine{107     \mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *mainHandler;}
+\DoxyCodeLine{111     Ui::VisualizerDialog *ui;}
+\DoxyCodeLine{115     \mbox{\hyperlink{classMetadataDialog}{MetadataDialog}} *MetadataWindow;}
+\DoxyCodeLine{116 \};}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// VISUALIZERDIALOG\_H}}
+
+\end{DoxyCode}

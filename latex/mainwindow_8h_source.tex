@@ -1,0 +1,38 @@
+\hypertarget{mainwindow_8h_source}{}\doxysection{mainwindow.\+h}
+\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef MAINWINDOW\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define MAINWINDOW\_H}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{registerdialog_8h}{registerdialog.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{galleriesdialog_8h}{galleriesdialog.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mongodbHandler_8h}{mongodbHandler.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{classMainWindow}{MainWindow}};}
+\DoxyCodeLine{19 \}}
+\DoxyCodeLine{24 \textcolor{keyword}{class }\mbox{\hyperlink{classMainWindow}{MainWindow}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     Q\_OBJECT}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{33     \textcolor{keyword}{explicit} \mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{34     \mbox{\hyperlink{classMainWindow}{\string~MainWindow}}();}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMainWindow_a8e73106a5e81aeef8d45368260dcef4a}{setHandler}}(\mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *handler);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} on\_pushButton\_register\_clicked();}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} on\_pushButton\_signIn\_clicked();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{private}:}
+\DoxyCodeLine{55     \mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *mainHandler;}
+\DoxyCodeLine{59     \mbox{\hyperlink{classGalleriesDialog}{GalleriesDialog}} *galleriesWindow;}
+\DoxyCodeLine{63     \mbox{\hyperlink{classRegisterDialog}{RegisterDialog}} *registerWindow;}
+\DoxyCodeLine{67     Ui::MainWindow *ui;}
+\DoxyCodeLine{68 \};}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MAINWINDOW\_H}}
+
+\end{DoxyCode}

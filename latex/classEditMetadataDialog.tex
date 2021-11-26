@@ -1,0 +1,157 @@
+\hypertarget{classEditMetadataDialog}{}\doxysection{Edit\+Metadata\+Dialog Class Reference}
+\label{classEditMetadataDialog}\index{EditMetadataDialog@{EditMetadataDialog}}
+
+
+The \mbox{\hyperlink{classEditMetadataDialog}{Edit\+Metadata\+Dialog}} class permite desplegar una interfaz que muestra la manera de editar la metadata de la imagen.  
+
+
+
+
+{\ttfamily \#include $<$editmetadatadialog.\+h$>$}
+
+Inheritance diagram for Edit\+Metadata\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEditMetadataDialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEditMetadataDialog_aaee249be7e4926a177f334b3060905be}{Edit\+Metadata\+Dialog}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classEditMetadataDialog}{Edit\+Metadata\+Dialog}} constructor de la clase \mbox{\hyperlink{classEditMetadataDialog}{Edit\+Metadata\+Dialog}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditMetadataDialog_a5264d21955272d5e7d199662a7f0343a}{set\+Handler}} (\mbox{\hyperlink{classMongodbHandler}{Mongodb\+Handler}} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em genera conexión con la base de datos \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditMetadataDialog_ab2ed658049f12d752de2742fd5f8e7d8}{set\+User\+Name}} (string username)
+\begin{DoxyCompactList}\small\item\em obtiene el nombre de usuario \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditMetadataDialog_a31df000fc6313c0449e99cf657e68d50}{set\+Gallery\+Name}} (string galleryname)
+\begin{DoxyCompactList}\small\item\em obtiene el nombre de las galerías \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classEditMetadataDialog_ab92f18dfe7e9bd4b6873f58cfe59ab27}\label{classEditMetadataDialog_ab92f18dfe7e9bd4b6873f58cfe59ab27}} 
+void {\bfseries show\+Content} ()
+\begin{DoxyCompactList}\small\item\em muestra el contenido en pantalla \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditMetadataDialog_a8339022bb140d73b07e9eda081035811}{set\+Length}} (int length)
+\begin{DoxyCompactList}\small\item\em obtiene la cantidad de imágenes que hay en la galería \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditMetadataDialog_acc6ee0de08a75d003632287181ef3086}{set\+Imagename}} (string image\+Name)
+\begin{DoxyCompactList}\small\item\em obtiene el nombre de las imágenes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEditMetadataDialog_ae7a8d2de995b56a84acb4ba2f3ea16c7}{set\+Images\+Vector}} (std\+::vector$<$ string $>$ images)
+\begin{DoxyCompactList}\small\item\em obtiene las imágenes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classEditMetadataDialog}{Edit\+Metadata\+Dialog}} class permite desplegar una interfaz que muestra la manera de editar la metadata de la imagen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEditMetadataDialog_aaee249be7e4926a177f334b3060905be}\label{classEditMetadataDialog_aaee249be7e4926a177f334b3060905be}} 
+\index{EditMetadataDialog@{EditMetadataDialog}!EditMetadataDialog@{EditMetadataDialog}}
+\index{EditMetadataDialog@{EditMetadataDialog}!EditMetadataDialog@{EditMetadataDialog}}
+\doxysubsubsection{\texorpdfstring{EditMetadataDialog()}{EditMetadataDialog()}}
+{\footnotesize\ttfamily Edit\+Metadata\+Dialog\+::\+Edit\+Metadata\+Dialog (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classEditMetadataDialog}{Edit\+Metadata\+Dialog}} constructor de la clase \mbox{\hyperlink{classEditMetadataDialog}{Edit\+Metadata\+Dialog}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEditMetadataDialog_a31df000fc6313c0449e99cf657e68d50}\label{classEditMetadataDialog_a31df000fc6313c0449e99cf657e68d50}} 
+\index{EditMetadataDialog@{EditMetadataDialog}!setGalleryName@{setGalleryName}}
+\index{setGalleryName@{setGalleryName}!EditMetadataDialog@{EditMetadataDialog}}
+\doxysubsubsection{\texorpdfstring{setGalleryName()}{setGalleryName()}}
+{\footnotesize\ttfamily void Edit\+Metadata\+Dialog\+::set\+Gallery\+Name (\begin{DoxyParamCaption}\item[{string}]{galleryname }\end{DoxyParamCaption})}
+
+
+
+obtiene el nombre de las galerías 
+
+
+\begin{DoxyParams}{Parameters}
+{\em galleryname} & nombre de la galería \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEditMetadataDialog_a5264d21955272d5e7d199662a7f0343a}\label{classEditMetadataDialog_a5264d21955272d5e7d199662a7f0343a}} 
+\index{EditMetadataDialog@{EditMetadataDialog}!setHandler@{setHandler}}
+\index{setHandler@{setHandler}!EditMetadataDialog@{EditMetadataDialog}}
+\doxysubsubsection{\texorpdfstring{setHandler()}{setHandler()}}
+{\footnotesize\ttfamily void Edit\+Metadata\+Dialog\+::set\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMongodbHandler}{Mongodb\+Handler}} $\ast$}]{handler }\end{DoxyParamCaption})}
+
+
+
+genera conexión con la base de datos 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & handler \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEditMetadataDialog_acc6ee0de08a75d003632287181ef3086}\label{classEditMetadataDialog_acc6ee0de08a75d003632287181ef3086}} 
+\index{EditMetadataDialog@{EditMetadataDialog}!setImagename@{setImagename}}
+\index{setImagename@{setImagename}!EditMetadataDialog@{EditMetadataDialog}}
+\doxysubsubsection{\texorpdfstring{setImagename()}{setImagename()}}
+{\footnotesize\ttfamily void Edit\+Metadata\+Dialog\+::set\+Imagename (\begin{DoxyParamCaption}\item[{string}]{image\+Name }\end{DoxyParamCaption})}
+
+
+
+obtiene el nombre de las imágenes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Name} & imagenes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEditMetadataDialog_ae7a8d2de995b56a84acb4ba2f3ea16c7}\label{classEditMetadataDialog_ae7a8d2de995b56a84acb4ba2f3ea16c7}} 
+\index{EditMetadataDialog@{EditMetadataDialog}!setImagesVector@{setImagesVector}}
+\index{setImagesVector@{setImagesVector}!EditMetadataDialog@{EditMetadataDialog}}
+\doxysubsubsection{\texorpdfstring{setImagesVector()}{setImagesVector()}}
+{\footnotesize\ttfamily void Edit\+Metadata\+Dialog\+::set\+Images\+Vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ string $>$}]{images }\end{DoxyParamCaption})}
+
+
+
+obtiene las imágenes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em images} & imagenes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEditMetadataDialog_a8339022bb140d73b07e9eda081035811}\label{classEditMetadataDialog_a8339022bb140d73b07e9eda081035811}} 
+\index{EditMetadataDialog@{EditMetadataDialog}!setLength@{setLength}}
+\index{setLength@{setLength}!EditMetadataDialog@{EditMetadataDialog}}
+\doxysubsubsection{\texorpdfstring{setLength()}{setLength()}}
+{\footnotesize\ttfamily void Edit\+Metadata\+Dialog\+::set\+Length (\begin{DoxyParamCaption}\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+obtiene la cantidad de imágenes que hay en la galería 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & cantidad \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classEditMetadataDialog_ab2ed658049f12d752de2742fd5f8e7d8}\label{classEditMetadataDialog_ab2ed658049f12d752de2742fd5f8e7d8}} 
+\index{EditMetadataDialog@{EditMetadataDialog}!setUserName@{setUserName}}
+\index{setUserName@{setUserName}!EditMetadataDialog@{EditMetadataDialog}}
+\doxysubsubsection{\texorpdfstring{setUserName()}{setUserName()}}
+{\footnotesize\ttfamily void Edit\+Metadata\+Dialog\+::set\+User\+Name (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+obtiene el nombre de usuario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & nombre de usuario \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{editmetadatadialog_8h}{editmetadatadialog.\+h}}\item 
+editmetadatadialog.\+cpp\end{DoxyCompactItemize}

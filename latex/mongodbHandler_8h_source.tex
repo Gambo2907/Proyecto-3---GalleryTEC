@@ -1,0 +1,52 @@
+\hypertarget{mongodbHandler_8h_source}{}\doxysection{mongodb\+Handler.\+h}
+\mbox{\hyperlink{mongodbHandler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef PROYECTO\_3\_GALLERYTEC\_MONGODBHANDLER\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define PROYECTO\_3\_GALLERYTEC\_MONGODBHANDLER\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <bsoncxx/json.hpp>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <mongocxx/client.hpp>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <mongocxx/stdx.hpp>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <mongocxx/client\_session.hpp>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <mongocxx/uri.hpp>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <mongocxx/instance.hpp>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <bsoncxx/builder/stream/helpers.hpp>}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <bsoncxx/builder/stream/document.hpp>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <bsoncxx/builder/stream/array.hpp>}}
+\DoxyCodeLine{24 \textcolor{keyword}{using} bsoncxx::builder::stream::close\_array;}
+\DoxyCodeLine{25 \textcolor{keyword}{using} bsoncxx::builder::stream::close\_document;}
+\DoxyCodeLine{26 \textcolor{keyword}{using} bsoncxx::builder::stream::document;}
+\DoxyCodeLine{27 \textcolor{keyword}{using} bsoncxx::builder::stream::finalize;}
+\DoxyCodeLine{28 \textcolor{keyword}{using} bsoncxx::builder::stream::open\_array;}
+\DoxyCodeLine{29 \textcolor{keyword}{using} bsoncxx::builder::stream::open\_document;}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{32 \textcolor{keyword}{using namespace }mongocxx;}
+\DoxyCodeLine{33 \textcolor{keyword}{using namespace }bsoncxx::builder::basic;}
+\DoxyCodeLine{34 \textcolor{keyword}{using namespace }bsoncxx::builder::stream;}
+\DoxyCodeLine{38 \textcolor{keyword}{class }\mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} \{}
+\DoxyCodeLine{39 \textcolor{keyword}{public}:}
+\DoxyCodeLine{43     \mbox{\hyperlink{classMongodbHandler_a76301e0d787466805f16999298da012a}{MongodbHandler}}();}
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMongodbHandler_aef64be190ebd925a2f3e754c58b92ee8}{addUserToDb}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} username, \textcolor{keyword}{const} \textcolor{keywordtype}{string} password);}
+\DoxyCodeLine{57     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMongodbHandler_a129b0bd2a07cfcd049b641de8cc893bb}{findElementFromUserColl}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} field, \textcolor{keyword}{const} \textcolor{keywordtype}{string} value);}
+\DoxyCodeLine{64     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMongodbHandler_aa10e6abaa70b1704f31a1382b49bc68b}{addGallery}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} galleryName, \textcolor{keyword}{const} \textcolor{keywordtype}{string} username);}
+\DoxyCodeLine{70     vector<string> \mbox{\hyperlink{classMongodbHandler_a98601282599f5e68ee11ae0c5a892060}{getUserGalleries}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} username);}
+\DoxyCodeLine{77     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMongodbHandler_a3a958f9aebe88335c3a75a742fef4ee1}{deleteGallery}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} username, \textcolor{keyword}{const} \textcolor{keywordtype}{string} galleryName); \textcolor{comment}{//no funciona}}
+\DoxyCodeLine{85 \textcolor{comment}{}    \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMongodbHandler_aee9921fef98d8746d85e75dc9d6ad5f9}{addImage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} username,\textcolor{keyword}{const} \textcolor{keywordtype}{string} galleryName,\textcolor{keyword}{const} \textcolor{keywordtype}{string} imageName);}
+\DoxyCodeLine{93     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMongodbHandler_aeb1e7643c32659a24b86515fb2f45ba1}{deleteImage}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} galleryName, \textcolor{keyword}{const} \textcolor{keywordtype}{string} imgName, \textcolor{keyword}{const} \textcolor{keywordtype}{string} username);}
+\DoxyCodeLine{100     vector<string> \mbox{\hyperlink{classMongodbHandler_aa3fa8ed945db8368d6b9d58b80ad3fe6}{getGalleryImages}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} username, \textcolor{keyword}{const} \textcolor{keywordtype}{string} galleryName);}
+\DoxyCodeLine{110     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classMongodbHandler_a9a23f25da688abe5e09a5410073bb642}{setImageMetadata}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} Name, \textcolor{keyword}{const} \textcolor{keywordtype}{string} gallery, \textcolor{keyword}{const} \textcolor{keywordtype}{string} field,\textcolor{keyword}{const} \textcolor{keywordtype}{string} newValue, \textcolor{keyword}{const} \textcolor{keywordtype}{string} username);}
+\DoxyCodeLine{118     vector<string> \mbox{\hyperlink{classMongodbHandler_a7aa326c224a1d6da9f59fb480437d3e9}{getImageMetadata}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} Name, \textcolor{keyword}{const} \textcolor{keywordtype}{string} gallery, \textcolor{keyword}{const} \textcolor{keywordtype}{string} username);}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{keyword}{private}:}
+\DoxyCodeLine{125     mongocxx::uri uri;}
+\DoxyCodeLine{129     mongocxx::client client;}
+\DoxyCodeLine{133     mongocxx::database db;}
+\DoxyCodeLine{134 \};}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//PROYECTO\_3\_GALLERYTEC\_MONGODBHANDLER\_H}}
+
+\end{DoxyCode}

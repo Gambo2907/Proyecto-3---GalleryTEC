@@ -1,0 +1,46 @@
+\hypertarget{editmetadatadialog_8h_source}{}\doxysection{editmetadatadialog.\+h}
+\mbox{\hyperlink{editmetadatadialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef EDITMETADATADIALOG\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define EDITMETADATADIALOG\_H}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mongodbHandler_8h}{mongodbHandler.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{imageOperations_8h}{imageOperations.h}}"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classEditMetadataDialog}{EditMetadataDialog}};}
+\DoxyCodeLine{18 \}}
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{classEditMetadataDialog}{EditMetadataDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     Q\_OBJECT}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \textcolor{keyword}{explicit} \mbox{\hyperlink{classEditMetadataDialog_aaee249be7e4926a177f334b3060905be}{EditMetadataDialog}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{33     \mbox{\hyperlink{classEditMetadataDialog}{\string~EditMetadataDialog}}();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEditMetadataDialog_a5264d21955272d5e7d199662a7f0343a}{setHandler}}(\mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *handler);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEditMetadataDialog_ab2ed658049f12d752de2742fd5f8e7d8}{setUserName}}(\textcolor{keywordtype}{string} username);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEditMetadataDialog_a31df000fc6313c0449e99cf657e68d50}{setGalleryName}}(\textcolor{keywordtype}{string} galleryname);}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEditMetadataDialog_ab92f18dfe7e9bd4b6873f58cfe59ab27}{showContent}}();}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEditMetadataDialog_a8339022bb140d73b07e9eda081035811}{setLength}}(\textcolor{keywordtype}{int} length);}
+\DoxyCodeLine{62     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEditMetadataDialog_acc6ee0de08a75d003632287181ef3086}{setImagename}}(\textcolor{keywordtype}{string} imageName);}
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEditMetadataDialog_ae7a8d2de995b56a84acb4ba2f3ea16c7}{setImagesVector}}(std::vector<string> images);}
+\DoxyCodeLine{68 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} on\_pushButton\_clicked();}
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} on\_pushButton\_2\_clicked();}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \textcolor{keyword}{private}:}
+\DoxyCodeLine{82     std::vector<string> images;}
+\DoxyCodeLine{86     \textcolor{keywordtype}{int} length;}
+\DoxyCodeLine{90     \textcolor{keywordtype}{int} length\_aux;}
+\DoxyCodeLine{94     \textcolor{keywordtype}{string} imageName;}
+\DoxyCodeLine{98     \textcolor{keywordtype}{string} username;}
+\DoxyCodeLine{102     \textcolor{keywordtype}{string} galleryname;}
+\DoxyCodeLine{106     \mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *mainHandler;}
+\DoxyCodeLine{110     Ui::EditMetadataDialog *ui;}
+\DoxyCodeLine{111 \};}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// EDITMETADATADIALOG\_H}}
+
+\end{DoxyCode}

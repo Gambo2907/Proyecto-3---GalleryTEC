@@ -1,0 +1,125 @@
+\hypertarget{classImageOperations}{}\doxysection{Image\+Operations Class Reference}
+\label{classImageOperations}\index{ImageOperations@{ImageOperations}}
+
+
+The \mbox{\hyperlink{classImageOperations}{Image\+Operations}} class permite las funciones principales de las imágenes de cada galería.  
+
+
+
+
+{\ttfamily \#include $<$image\+Operations.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classImageOperations_aa002ef8c8043e4bcff91058206dfa2fd}\label{classImageOperations_aa002ef8c8043e4bcff91058206dfa2fd}} 
+{\bfseries Image\+Operations} ()
+\begin{DoxyCompactList}\small\item\em Imagen\+ID Constructor de la clase Imagen\+ID. \end{DoxyCompactList}\item 
+QList$<$ int $>$ \mbox{\hyperlink{classImageOperations_abaab7f3de11529e00341c5119204f483}{convert\+Img\+To\+Bytes\+Array}} (QPixmap image)
+\begin{DoxyCompactList}\small\item\em genera una lista que convierte la imagen en bytes. \end{DoxyCompactList}\item 
+QPixmap \mbox{\hyperlink{classImageOperations_a926d5d9fa268a9dd8baa940e4bc59ee0}{convert\+Bytes\+Array\+To\+Img}} (QList$<$ int $>$ bytes\+Array)
+\begin{DoxyCompactList}\small\item\em convierte un arreglo de bytes en imagen. \end{DoxyCompactList}\item 
+QList$<$ QList$<$ int $>$ $>$ \mbox{\hyperlink{classImageOperations_aec63d14d81399f682997890c01154925}{divide\+List\+Array}} (QList$<$ int $>$ bytes\+Array)
+\begin{DoxyCompactList}\small\item\em divide el array en tres \end{DoxyCompactList}\item 
+QList$<$ int $>$ \mbox{\hyperlink{classImageOperations_a8076fd08e4418f4605892a66e10f3fb5}{calculate\+Parity}} (QList$<$ QList$<$ int $>$ $>$ bytes\+Triplet)
+\begin{DoxyCompactList}\small\item\em calcula el bloque de paridad \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImageOperations_a5bd5d1791ffbf0cc48fa1819720a3f0e}{storage\+In\+RAID}} (QList$<$ QList$<$ int $>$ $>$ bytes\+Triplet, QList$<$ int $>$ parity)
+\begin{DoxyCompactList}\small\item\em guarda las partes de la imagen en los RAIDS \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classImageOperations}{Image\+Operations}} class permite las funciones principales de las imágenes de cada galería. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classImageOperations_a8076fd08e4418f4605892a66e10f3fb5}\label{classImageOperations_a8076fd08e4418f4605892a66e10f3fb5}} 
+\index{ImageOperations@{ImageOperations}!calculateParity@{calculateParity}}
+\index{calculateParity@{calculateParity}!ImageOperations@{ImageOperations}}
+\doxysubsubsection{\texorpdfstring{calculateParity()}{calculateParity()}}
+{\footnotesize\ttfamily QList$<$ int $>$ Image\+Operations\+::calculate\+Parity (\begin{DoxyParamCaption}\item[{QList$<$ QList$<$ int $>$ $>$}]{bytes\+Triplet }\end{DoxyParamCaption})}
+
+
+
+calcula el bloque de paridad 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes\+Triplet} & tripleta de bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImageOperations_a926d5d9fa268a9dd8baa940e4bc59ee0}\label{classImageOperations_a926d5d9fa268a9dd8baa940e4bc59ee0}} 
+\index{ImageOperations@{ImageOperations}!convertBytesArrayToImg@{convertBytesArrayToImg}}
+\index{convertBytesArrayToImg@{convertBytesArrayToImg}!ImageOperations@{ImageOperations}}
+\doxysubsubsection{\texorpdfstring{convertBytesArrayToImg()}{convertBytesArrayToImg()}}
+{\footnotesize\ttfamily QPixmap Image\+Operations\+::convert\+Bytes\+Array\+To\+Img (\begin{DoxyParamCaption}\item[{QList$<$ int $>$}]{bytes\+Array }\end{DoxyParamCaption})}
+
+
+
+convierte un arreglo de bytes en imagen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes\+Array} & arreglo con los bytes de la imagen. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImageOperations_abaab7f3de11529e00341c5119204f483}\label{classImageOperations_abaab7f3de11529e00341c5119204f483}} 
+\index{ImageOperations@{ImageOperations}!convertImgToBytesArray@{convertImgToBytesArray}}
+\index{convertImgToBytesArray@{convertImgToBytesArray}!ImageOperations@{ImageOperations}}
+\doxysubsubsection{\texorpdfstring{convertImgToBytesArray()}{convertImgToBytesArray()}}
+{\footnotesize\ttfamily QList$<$ int $>$ Image\+Operations\+::convert\+Img\+To\+Bytes\+Array (\begin{DoxyParamCaption}\item[{QPixmap}]{image }\end{DoxyParamCaption})}
+
+
+
+genera una lista que convierte la imagen en bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & imagen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bytes\+Array. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImageOperations_aec63d14d81399f682997890c01154925}\label{classImageOperations_aec63d14d81399f682997890c01154925}} 
+\index{ImageOperations@{ImageOperations}!divideListArray@{divideListArray}}
+\index{divideListArray@{divideListArray}!ImageOperations@{ImageOperations}}
+\doxysubsubsection{\texorpdfstring{divideListArray()}{divideListArray()}}
+{\footnotesize\ttfamily QList$<$ QList$<$ int $>$ $>$ Image\+Operations\+::divide\+List\+Array (\begin{DoxyParamCaption}\item[{QList$<$ int $>$}]{bytes\+Array }\end{DoxyParamCaption})}
+
+
+
+divide el array en tres 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes\+Array} & bytes array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImageOperations_a5bd5d1791ffbf0cc48fa1819720a3f0e}\label{classImageOperations_a5bd5d1791ffbf0cc48fa1819720a3f0e}} 
+\index{ImageOperations@{ImageOperations}!storageInRAID@{storageInRAID}}
+\index{storageInRAID@{storageInRAID}!ImageOperations@{ImageOperations}}
+\doxysubsubsection{\texorpdfstring{storageInRAID()}{storageInRAID()}}
+{\footnotesize\ttfamily void Image\+Operations\+::storage\+In\+RAID (\begin{DoxyParamCaption}\item[{QList$<$ QList$<$ int $>$ $>$}]{bytes\+Triplet,  }\item[{QList$<$ int $>$}]{parity }\end{DoxyParamCaption})}
+
+
+
+guarda las partes de la imagen en los RAIDS 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bytes\+Triplet} & tripleta de bytes \\
+\hline
+{\em parity} & paridad \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{imageOperations_8h}{image\+Operations.\+h}}\item 
+image\+Operations.\+cpp\end{DoxyCompactItemize}

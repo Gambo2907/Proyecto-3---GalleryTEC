@@ -1,0 +1,33 @@
+\hypertarget{registerdialog_8h_source}{}\doxysection{registerdialog.\+h}
+\mbox{\hyperlink{registerdialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef REGISTERDIALOG\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define REGISTERDIALOG\_H}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mongodbHandler_8h}{mongodbHandler.h}}"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{classRegisterDialog}{RegisterDialog}};}
+\DoxyCodeLine{16 \}}
+\DoxyCodeLine{21 \textcolor{keyword}{class }\mbox{\hyperlink{classRegisterDialog}{RegisterDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23     Q\_OBJECT}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{30     \textcolor{keyword}{explicit} \mbox{\hyperlink{classRegisterDialog_a58097230bc9a9a0a91c0704c79ff3823}{RegisterDialog}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{31     \mbox{\hyperlink{classRegisterDialog}{\string~RegisterDialog}}();}
+\DoxyCodeLine{36     \textcolor{keywordtype}{void} \mbox{\hyperlink{classRegisterDialog_a808d69cb643a8374cbeb6d51fd7b601d}{setHandler}}(\mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *handler);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} on\_pushButton\_back\_clicked();}
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} on\_pushButton\_register\_clicked();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keyword}{private}:}
+\DoxyCodeLine{52     \mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *mainHandler;}
+\DoxyCodeLine{56     Ui::RegisterDialog *ui;}
+\DoxyCodeLine{57 \};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// REGISTERDIALOG\_H}}
+
+\end{DoxyCode}

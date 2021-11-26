@@ -1,0 +1,259 @@
+\hypertarget{classMongodbHandler}{}\doxysection{Mongodb\+Handler Class Reference}
+\label{classMongodbHandler}\index{MongodbHandler@{MongodbHandler}}
+
+
+The \mbox{\hyperlink{classMongodbHandler}{Mongodb\+Handler}} class permite el manejo de la base de datos.  
+
+
+
+
+{\ttfamily \#include $<$mongodb\+Handler.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMongodbHandler_a76301e0d787466805f16999298da012a}\label{classMongodbHandler_a76301e0d787466805f16999298da012a}} 
+{\bfseries Mongodb\+Handler} ()
+\begin{DoxyCompactList}\small\item\em constructor de la clase \mbox{\hyperlink{classMongodbHandler}{Mongodb\+Handler}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMongodbHandler_aef64be190ebd925a2f3e754c58b92ee8}{add\+User\+To\+Db}} (const string username, const string password)
+\begin{DoxyCompactList}\small\item\em Añade un usuario a la base de datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMongodbHandler_a129b0bd2a07cfcd049b641de8cc893bb}{find\+Element\+From\+User\+Coll}} (const string field, const string value)
+\begin{DoxyCompactList}\small\item\em Encuentra un elemento de la base de datos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMongodbHandler_aa10e6abaa70b1704f31a1382b49bc68b}{add\+Gallery}} (const string gallery\+Name, const string username)
+\begin{DoxyCompactList}\small\item\em Añade una galería a la base de datos. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{classMongodbHandler_a98601282599f5e68ee11ae0c5a892060}{get\+User\+Galleries}} (const string username)
+\begin{DoxyCompactList}\small\item\em Obtiene las galerías del usuario. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMongodbHandler_a3a958f9aebe88335c3a75a742fef4ee1}{delete\+Gallery}} (const string username, const string gallery\+Name)
+\begin{DoxyCompactList}\small\item\em elimina una galería \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMongodbHandler_aee9921fef98d8746d85e75dc9d6ad5f9}{add\+Image}} (const string username, const string gallery\+Name, const string image\+Name)
+\begin{DoxyCompactList}\small\item\em añade una imagen a la galería \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMongodbHandler_aeb1e7643c32659a24b86515fb2f45ba1}{delete\+Image}} (const string gallery\+Name, const string img\+Name, const string username)
+\begin{DoxyCompactList}\small\item\em elimina una imagen de una galería \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{classMongodbHandler_aa3fa8ed945db8368d6b9d58b80ad3fe6}{get\+Gallery\+Images}} (const string username, const string gallery\+Name)
+\begin{DoxyCompactList}\small\item\em obtiene las imágenes de una galería \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMongodbHandler_a9a23f25da688abe5e09a5410073bb642}{set\+Image\+Metadata}} (const string Name, const string gallery, const string field, const string new\+Value, const string username)
+\begin{DoxyCompactList}\small\item\em edita la información de la metadata de una imagen \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{classMongodbHandler_a7aa326c224a1d6da9f59fb480437d3e9}{get\+Image\+Metadata}} (const string Name, const string gallery, const string username)
+\begin{DoxyCompactList}\small\item\em obtiene la metadata de una imagen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classMongodbHandler}{Mongodb\+Handler}} class permite el manejo de la base de datos. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMongodbHandler_aa10e6abaa70b1704f31a1382b49bc68b}\label{classMongodbHandler_aa10e6abaa70b1704f31a1382b49bc68b}} 
+\index{MongodbHandler@{MongodbHandler}!addGallery@{addGallery}}
+\index{addGallery@{addGallery}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{addGallery()}{addGallery()}}
+{\footnotesize\ttfamily bool Mongodb\+Handler\+::add\+Gallery (\begin{DoxyParamCaption}\item[{const string}]{gallery\+Name,  }\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+Añade una galería a la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gallery\+Name} & nombre de la galería \\
+\hline
+{\em username} & nombre del usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMongodbHandler_aee9921fef98d8746d85e75dc9d6ad5f9}\label{classMongodbHandler_aee9921fef98d8746d85e75dc9d6ad5f9}} 
+\index{MongodbHandler@{MongodbHandler}!addImage@{addImage}}
+\index{addImage@{addImage}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{addImage()}{addImage()}}
+{\footnotesize\ttfamily bool Mongodb\+Handler\+::add\+Image (\begin{DoxyParamCaption}\item[{const string}]{username,  }\item[{const string}]{gallery\+Name,  }\item[{const string}]{image\+Name }\end{DoxyParamCaption})}
+
+
+
+añade una imagen a la galería 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & nombre de usuario \\
+\hline
+{\em gallery\+Name} & nombre de la galería \\
+\hline
+{\em image\+Name} & nombre de la imagen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMongodbHandler_aef64be190ebd925a2f3e754c58b92ee8}\label{classMongodbHandler_aef64be190ebd925a2f3e754c58b92ee8}} 
+\index{MongodbHandler@{MongodbHandler}!addUserToDb@{addUserToDb}}
+\index{addUserToDb@{addUserToDb}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{addUserToDb()}{addUserToDb()}}
+{\footnotesize\ttfamily bool Mongodb\+Handler\+::add\+User\+To\+Db (\begin{DoxyParamCaption}\item[{const string}]{username,  }\item[{const string}]{password }\end{DoxyParamCaption})}
+
+
+
+Añade un usuario a la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & nombre de usuario \\
+\hline
+{\em password} & contraseña \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMongodbHandler_a3a958f9aebe88335c3a75a742fef4ee1}\label{classMongodbHandler_a3a958f9aebe88335c3a75a742fef4ee1}} 
+\index{MongodbHandler@{MongodbHandler}!deleteGallery@{deleteGallery}}
+\index{deleteGallery@{deleteGallery}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{deleteGallery()}{deleteGallery()}}
+{\footnotesize\ttfamily bool Mongodb\+Handler\+::delete\+Gallery (\begin{DoxyParamCaption}\item[{const string}]{username,  }\item[{const string}]{gallery\+Name }\end{DoxyParamCaption})}
+
+
+
+elimina una galería 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & nombre de usuario \\
+\hline
+{\em gallery\+Name} & nombre de la galería \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMongodbHandler_aeb1e7643c32659a24b86515fb2f45ba1}\label{classMongodbHandler_aeb1e7643c32659a24b86515fb2f45ba1}} 
+\index{MongodbHandler@{MongodbHandler}!deleteImage@{deleteImage}}
+\index{deleteImage@{deleteImage}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{deleteImage()}{deleteImage()}}
+{\footnotesize\ttfamily bool Mongodb\+Handler\+::delete\+Image (\begin{DoxyParamCaption}\item[{const string}]{gallery\+Name,  }\item[{const string}]{img\+Name,  }\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+elimina una imagen de una galería 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gallery\+Name} & nombre de la galería \\
+\hline
+{\em img\+Name} & nombre de la imagen \\
+\hline
+{\em username} & nombre de usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMongodbHandler_a129b0bd2a07cfcd049b641de8cc893bb}\label{classMongodbHandler_a129b0bd2a07cfcd049b641de8cc893bb}} 
+\index{MongodbHandler@{MongodbHandler}!findElementFromUserColl@{findElementFromUserColl}}
+\index{findElementFromUserColl@{findElementFromUserColl}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{findElementFromUserColl()}{findElementFromUserColl()}}
+{\footnotesize\ttfamily bool Mongodb\+Handler\+::find\+Element\+From\+User\+Coll (\begin{DoxyParamCaption}\item[{const string}]{field,  }\item[{const string}]{value }\end{DoxyParamCaption})}
+
+
+
+Encuentra un elemento de la base de datos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & campo \\
+\hline
+{\em value} & valor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMongodbHandler_aa3fa8ed945db8368d6b9d58b80ad3fe6}\label{classMongodbHandler_aa3fa8ed945db8368d6b9d58b80ad3fe6}} 
+\index{MongodbHandler@{MongodbHandler}!getGalleryImages@{getGalleryImages}}
+\index{getGalleryImages@{getGalleryImages}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{getGalleryImages()}{getGalleryImages()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Mongodb\+Handler\+::get\+Gallery\+Images (\begin{DoxyParamCaption}\item[{const string}]{username,  }\item[{const string}]{gallery\+Name }\end{DoxyParamCaption})}
+
+
+
+obtiene las imágenes de una galería 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & nombre de usuario \\
+\hline
+{\em gallery\+Name} & nombre de la galería \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+gallery\+Images\+Vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMongodbHandler_a7aa326c224a1d6da9f59fb480437d3e9}\label{classMongodbHandler_a7aa326c224a1d6da9f59fb480437d3e9}} 
+\index{MongodbHandler@{MongodbHandler}!getImageMetadata@{getImageMetadata}}
+\index{getImageMetadata@{getImageMetadata}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{getImageMetadata()}{getImageMetadata()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Mongodb\+Handler\+::get\+Image\+Metadata (\begin{DoxyParamCaption}\item[{const string}]{Name,  }\item[{const string}]{gallery,  }\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+obtiene la metadata de una imagen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & nombre de la imagen \\
+\hline
+{\em gallery} & nombre de la galería \\
+\hline
+{\em username} & nombre de usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+image\+Metadata\+Vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMongodbHandler_a98601282599f5e68ee11ae0c5a892060}\label{classMongodbHandler_a98601282599f5e68ee11ae0c5a892060}} 
+\index{MongodbHandler@{MongodbHandler}!getUserGalleries@{getUserGalleries}}
+\index{getUserGalleries@{getUserGalleries}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{getUserGalleries()}{getUserGalleries()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Mongodb\+Handler\+::get\+User\+Galleries (\begin{DoxyParamCaption}\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+Obtiene las galerías del usuario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & nombre de usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+galleries vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMongodbHandler_a9a23f25da688abe5e09a5410073bb642}\label{classMongodbHandler_a9a23f25da688abe5e09a5410073bb642}} 
+\index{MongodbHandler@{MongodbHandler}!setImageMetadata@{setImageMetadata}}
+\index{setImageMetadata@{setImageMetadata}!MongodbHandler@{MongodbHandler}}
+\doxysubsubsection{\texorpdfstring{setImageMetadata()}{setImageMetadata()}}
+{\footnotesize\ttfamily bool Mongodb\+Handler\+::set\+Image\+Metadata (\begin{DoxyParamCaption}\item[{const string}]{Name,  }\item[{const string}]{gallery,  }\item[{const string}]{field,  }\item[{const string}]{new\+Value,  }\item[{const string}]{username }\end{DoxyParamCaption})}
+
+
+
+edita la información de la metadata de una imagen 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & nombre de la imagen \\
+\hline
+{\em gallery} & nombre de la galería \\
+\hline
+{\em field} & campo \\
+\hline
+{\em new\+Value} & nuevo valor \\
+\hline
+{\em username} & nombre de usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mongodbHandler_8h}{mongodb\+Handler.\+h}}\item 
+mongodb\+Handler.\+cpp\end{DoxyCompactItemize}

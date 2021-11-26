@@ -1,0 +1,41 @@
+\hypertarget{galleriesdialog_8h_source}{}\doxysection{galleriesdialog.\+h}
+\mbox{\hyperlink{galleriesdialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef GALLERIESDIALOG\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define GALLERIESDIALOG\_H}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{imagesdialog_8h}{imagesdialog.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mongodbHandler_8h}{mongodbHandler.h}}"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{classGalleriesDialog}{GalleriesDialog}};}
+\DoxyCodeLine{18 \}}
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{classGalleriesDialog}{GalleriesDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     Q\_OBJECT}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{public}:}
+\DoxyCodeLine{32     \textcolor{keyword}{explicit} \mbox{\hyperlink{classGalleriesDialog_a0a9333773715d79a0601356d3f4d5745}{GalleriesDialog}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{33     \mbox{\hyperlink{classGalleriesDialog}{\string~GalleriesDialog}}();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGalleriesDialog_ab2d1e0cf313dd8d6f700121a61910176}{setHandler}}(\mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *handler);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGalleriesDialog_aa145e2ca85d60bfcef945b2fd59a5bd1}{setUserName}}(\textcolor{keywordtype}{string} username);}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classGalleriesDialog_a47223aa35476b9c884b26a6e50111cf4}{showContent}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} on\_pushButton\_GSelect\_clicked();}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} on\_pushButton\_Gback\_clicked();}
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} on\_pushButton\_GAdd\_clicked();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{keyword}{private}:}
+\DoxyCodeLine{68     \textcolor{keywordtype}{string} username;}
+\DoxyCodeLine{72     \mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *mainHandler;}
+\DoxyCodeLine{76     \mbox{\hyperlink{classImagesDialog}{ImagesDialog}} *imageWindow;}
+\DoxyCodeLine{80     Ui::GalleriesDialog *ui;}
+\DoxyCodeLine{81 \};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// GALLERIESDIALOG\_H}}
+
+\end{DoxyCode}

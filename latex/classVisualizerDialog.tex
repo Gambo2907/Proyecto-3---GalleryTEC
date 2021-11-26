@@ -1,0 +1,140 @@
+\hypertarget{classVisualizerDialog}{}\doxysection{Visualizer\+Dialog Class Reference}
+\label{classVisualizerDialog}\index{VisualizerDialog@{VisualizerDialog}}
+
+
+The \mbox{\hyperlink{classVisualizerDialog}{Visualizer\+Dialog}} class permite desplegar una interfaz que muestra la imagen seleccionada.  
+
+
+
+
+{\ttfamily \#include $<$visualizerdialog.\+h$>$}
+
+Inheritance diagram for Visualizer\+Dialog\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classVisualizerDialog}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVisualizerDialog_a9d3deb95d3e436762a92d1f53758f839}{Visualizer\+Dialog}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classVisualizerDialog}{Visualizer\+Dialog}} constructor de la clase \mbox{\hyperlink{classVisualizerDialog}{Visualizer\+Dialog}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVisualizerDialog_a2187bca07401b8a0b80f11a984ff8d98}{set\+Handler}} (\mbox{\hyperlink{classMongodbHandler}{Mongodb\+Handler}} $\ast$handler)
+\begin{DoxyCompactList}\small\item\em genera conexión con la base de datos \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVisualizerDialog_af5c0ed8f4db75939e831067b092ac51d}{set\+User\+Name}} (string username)
+\begin{DoxyCompactList}\small\item\em obtiene el nombre de usuario \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVisualizerDialog_abc2c4271f0a1994158708cb7b3ece206}{set\+Gallery\+Name}} (string galleryname)
+\begin{DoxyCompactList}\small\item\em obtiene el nombre de las galerías \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classVisualizerDialog_a264ece2ab8ed6a8c2f1c146c1709420c}\label{classVisualizerDialog_a264ece2ab8ed6a8c2f1c146c1709420c}} 
+void {\bfseries show\+Content} ()
+\begin{DoxyCompactList}\small\item\em muestra el contenido en pantalla \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVisualizerDialog_aa551076dc7321690cc97e230752267a7}{set\+Length}} (int length)
+\begin{DoxyCompactList}\small\item\em obtiene la cantidad de imágenes que hay en la galería \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVisualizerDialog_a84bb9d54e64715214213284bbca8c593}{set\+Images\+Vector}} (std\+::vector$<$ string $>$ images)
+\begin{DoxyCompactList}\small\item\em obtiene las imágenes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classVisualizerDialog}{Visualizer\+Dialog}} class permite desplegar una interfaz que muestra la imagen seleccionada. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVisualizerDialog_a9d3deb95d3e436762a92d1f53758f839}\label{classVisualizerDialog_a9d3deb95d3e436762a92d1f53758f839}} 
+\index{VisualizerDialog@{VisualizerDialog}!VisualizerDialog@{VisualizerDialog}}
+\index{VisualizerDialog@{VisualizerDialog}!VisualizerDialog@{VisualizerDialog}}
+\doxysubsubsection{\texorpdfstring{VisualizerDialog()}{VisualizerDialog()}}
+{\footnotesize\ttfamily Visualizer\+Dialog\+::\+Visualizer\+Dialog (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{classVisualizerDialog}{Visualizer\+Dialog}} constructor de la clase \mbox{\hyperlink{classVisualizerDialog}{Visualizer\+Dialog}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVisualizerDialog_abc2c4271f0a1994158708cb7b3ece206}\label{classVisualizerDialog_abc2c4271f0a1994158708cb7b3ece206}} 
+\index{VisualizerDialog@{VisualizerDialog}!setGalleryName@{setGalleryName}}
+\index{setGalleryName@{setGalleryName}!VisualizerDialog@{VisualizerDialog}}
+\doxysubsubsection{\texorpdfstring{setGalleryName()}{setGalleryName()}}
+{\footnotesize\ttfamily void Visualizer\+Dialog\+::set\+Gallery\+Name (\begin{DoxyParamCaption}\item[{string}]{galleryname }\end{DoxyParamCaption})}
+
+
+
+obtiene el nombre de las galerías 
+
+
+\begin{DoxyParams}{Parameters}
+{\em galleryname} & nombre de la galería \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVisualizerDialog_a2187bca07401b8a0b80f11a984ff8d98}\label{classVisualizerDialog_a2187bca07401b8a0b80f11a984ff8d98}} 
+\index{VisualizerDialog@{VisualizerDialog}!setHandler@{setHandler}}
+\index{setHandler@{setHandler}!VisualizerDialog@{VisualizerDialog}}
+\doxysubsubsection{\texorpdfstring{setHandler()}{setHandler()}}
+{\footnotesize\ttfamily void Visualizer\+Dialog\+::set\+Handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMongodbHandler}{Mongodb\+Handler}} $\ast$}]{handler }\end{DoxyParamCaption})}
+
+
+
+genera conexión con la base de datos 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handler} & handler \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVisualizerDialog_a84bb9d54e64715214213284bbca8c593}\label{classVisualizerDialog_a84bb9d54e64715214213284bbca8c593}} 
+\index{VisualizerDialog@{VisualizerDialog}!setImagesVector@{setImagesVector}}
+\index{setImagesVector@{setImagesVector}!VisualizerDialog@{VisualizerDialog}}
+\doxysubsubsection{\texorpdfstring{setImagesVector()}{setImagesVector()}}
+{\footnotesize\ttfamily void Visualizer\+Dialog\+::set\+Images\+Vector (\begin{DoxyParamCaption}\item[{std\+::vector$<$ string $>$}]{images }\end{DoxyParamCaption})}
+
+
+
+obtiene las imágenes 
+
+
+\begin{DoxyParams}{Parameters}
+{\em images} & imagenes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVisualizerDialog_aa551076dc7321690cc97e230752267a7}\label{classVisualizerDialog_aa551076dc7321690cc97e230752267a7}} 
+\index{VisualizerDialog@{VisualizerDialog}!setLength@{setLength}}
+\index{setLength@{setLength}!VisualizerDialog@{VisualizerDialog}}
+\doxysubsubsection{\texorpdfstring{setLength()}{setLength()}}
+{\footnotesize\ttfamily void Visualizer\+Dialog\+::set\+Length (\begin{DoxyParamCaption}\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+obtiene la cantidad de imágenes que hay en la galería 
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & cantidad \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVisualizerDialog_af5c0ed8f4db75939e831067b092ac51d}\label{classVisualizerDialog_af5c0ed8f4db75939e831067b092ac51d}} 
+\index{VisualizerDialog@{VisualizerDialog}!setUserName@{setUserName}}
+\index{setUserName@{setUserName}!VisualizerDialog@{VisualizerDialog}}
+\doxysubsubsection{\texorpdfstring{setUserName()}{setUserName()}}
+{\footnotesize\ttfamily void Visualizer\+Dialog\+::set\+User\+Name (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+obtiene el nombre de usuario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & nombre de usuario \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{visualizerdialog_8h}{visualizerdialog.\+h}}\item 
+visualizerdialog.\+cpp\end{DoxyCompactItemize}

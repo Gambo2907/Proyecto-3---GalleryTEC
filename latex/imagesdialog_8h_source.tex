@@ -1,0 +1,45 @@
+\hypertarget{imagesdialog_8h_source}{}\doxysection{imagesdialog.\+h}
+\mbox{\hyperlink{imagesdialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef IMAGESDIALOG\_H}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define IMAGESDIALOG\_H}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <QDialog>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{visualizerdialog_8h}{visualizerdialog.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{imageOperations_8h}{imageOperations.h}}"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mongodbHandler_8h}{mongodbHandler.h}}"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{namespace }Ui \{}
+\DoxyCodeLine{18     \textcolor{keyword}{class }\mbox{\hyperlink{classImagesDialog}{ImagesDialog}};}
+\DoxyCodeLine{19 \}}
+\DoxyCodeLine{25 \textcolor{keyword}{class }\mbox{\hyperlink{classImagesDialog}{ImagesDialog}} : \textcolor{keyword}{public} QDialog}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27 Q\_OBJECT}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{34     \textcolor{keyword}{explicit} \mbox{\hyperlink{classImagesDialog_a3e530ac56f99e6e11d54b87beb7bd36e}{ImagesDialog}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{35     \mbox{\hyperlink{classImagesDialog}{\string~ImagesDialog}}();}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{classImagesDialog_adc56e9f02b8680f11f298a1bc3486afd}{setHandler}}(\mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *handler);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{classImagesDialog_af0d391cc11f85f16bca9db2d01527ae5}{setUserName}}(\textcolor{keywordtype}{string} username);}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{classImagesDialog_ae45fb53fb200a1ff85d23fde6456db94}{setGalleryName}}(\textcolor{keywordtype}{string} galleryname);}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{classImagesDialog_a49cab9e235e3ff3b07eed8e3e53eeb90}{showContent}}();}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{60     \textcolor{keywordtype}{void} on\_pushButton\_Iback\_clicked();}
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} on\_pushButton\_IVisualizer\_clicked();}
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} on\_pushButton\_IAdd\_clicked();}
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} on\_pushButton\_IDelete\_clicked();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{private}:}
+\DoxyCodeLine{78     \textcolor{keywordtype}{string} username;}
+\DoxyCodeLine{82     \textcolor{keywordtype}{string} galleryname;}
+\DoxyCodeLine{86     \mbox{\hyperlink{classMongodbHandler}{MongodbHandler}} *mainHandler;}
+\DoxyCodeLine{90     \mbox{\hyperlink{classImageOperations}{ImageOperations}} *imageOperations;}
+\DoxyCodeLine{94     \mbox{\hyperlink{classVisualizerDialog}{VisualizerDialog}} *visualizerWindow;}
+\DoxyCodeLine{98     Ui::ImagesDialog *ui;}
+\DoxyCodeLine{99 \};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// IMAGESDIALOG\_H}}
+
+\end{DoxyCode}
