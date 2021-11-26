@@ -33,10 +33,24 @@ public:
      */
     explicit ImagesDialog(QWidget *parent = nullptr);
     ~ImagesDialog();
-
+    /**
+     * @brief genera conexión con la base de datos
+     * @param handler handler
+     */
     void setHandler(MongodbHandler *handler);
+    /**
+     * @brief obtiene el nombre de usuario
+     * @param username nombre de usuario
+     */
     void setUserName(string username);
+    /**
+     * @brief obtiene el nombre de las galerías
+     * @param galleryname nombre de la galería
+     */
     void setGalleryName(string galleryname);
+    /**
+     * @brief muestra el contenido en pantalla
+     */
     void showContent();
 
 private slots:
@@ -52,12 +66,23 @@ private slots:
      * @brief on_pushButton_IAdd_clicked Valida los eventos del boton add.
      */
     void on_pushButton_IAdd_clicked();
-
+    /**
+     * @brief on_pushButton_IDelete_clicked Valida los eventos del boton delete.
+     */
     void on_pushButton_IDelete_clicked();
 
 private:
+    /**
+     * @brief nombre de usuario
+     */
     string username;
+    /**
+     * @brief nombre de la galería
+     */
     string galleryname;
+    /**
+     * @brief mainHandler instancia de la clase MongodbHandler.
+     */
     MongodbHandler *mainHandler;
     /**
      * @brief imageOperations instancia de la clase ImagesOperations.

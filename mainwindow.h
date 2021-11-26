@@ -32,6 +32,10 @@ public:
      */
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    /**
+     * @brief genera conexión con la base de datos
+     * @param handler handler
+     */
     void setHandler(MongodbHandler *handler);
 
 private slots:

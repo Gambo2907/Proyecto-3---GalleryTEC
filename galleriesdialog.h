@@ -31,9 +31,19 @@ public:
      */
     explicit GalleriesDialog(QWidget *parent = nullptr);
     ~GalleriesDialog();
-
+    /**
+     * @brief genera conexión con la base de datos
+     * @param handler handler
+     */
     void setHandler(MongodbHandler *handler);
+    /**
+     * @brief obtiene el nombre de usuario dueño de las galerías
+     * @param username nombre de usuario
+     */
     void setUserName(string username);
+    /**
+     * @brief muestra el contenido (galerías)
+     */
     void showContent();
 
 private slots:
@@ -45,12 +55,20 @@ private slots:
      * @brief on_pushButton_Gback_clicked Valida los eventos del boton back.
      */
     void on_pushButton_Gback_clicked();
-
+    /**
+     * @brief on_pushButton_GAdd_clicked Valida los eventos del boton add.
+     */
     void on_pushButton_GAdd_clicked();
 
 
 private:
+    /**
+     * @brief nombre de usuario del dueño de las galerías
+     */
     string username;
+    /**
+     * @brief Instancia de la clase MongodbHandler
+     */
     MongodbHandler *mainHandler;
     /**
      * @brief imageWindow instancia de la clase ImagesDialog

@@ -55,15 +55,68 @@ public:
      * @return true
      */
     bool findElementFromUserColl(const string field, const string value);
-
+    /**
+     * @brief Añade una galería a la base de datos
+     * @param galleryName nombre de la galería
+     * @param username nombre del usuario
+     * @return true
+     */
     bool addGallery(const string galleryName, const string username);
+    /**
+     * @brief Obtiene las galerías del usuario
+     * @param username nombre de usuario
+     * @return galleries vector
+     */
     vector<string> getUserGalleries(const string username);
+    /**
+     * @brief elimina una galería
+     * @param username nombre de usuario
+     * @param galleryName nombre de la galería
+     * @return true
+     */
     bool deleteGallery(const string username, const string galleryName); //no funciona
+    /**
+     * @brief añade una imagen a la galería
+     * @param username nombre de usuario
+     * @param galleryName nombre de la galería
+     * @param imageName nombre de la imagen
+     * @return true
+     */
     bool addImage(const string username,const string galleryName,const string imageName);
+    /**
+     * @brief elimina una imagen de una galería
+     * @param galleryName nombre de la galería
+     * @param imgName nombre de la imagen
+     * @param username nombre de usuario
+     * @return true
+     */
     bool deleteImage(const string galleryName, const string imgName, const string username);
+    /**
+     * @brief obtiene las imágenes de una galería
+     * @param username nombre de usuario
+     * @param galleryName nombre de la galería
+     * @return galleryImagesVector
+     */
     vector<string> getGalleryImages(const string username, const string galleryName);
+    /**
+     * @brief edita la información de la metadata de una imagen
+     * @param Name nombre de la imagen
+     * @param gallery nombre de la galería
+     * @param field campo
+     * @param newValue nuevo valor
+     * @param username nombre de usuario
+     * @return true
+     */
     bool setImageMetadata(const string Name, const string gallery, const string field,const string newValue, const string username);
+    /**
+     * @brief obtiene la metadata de una imagen
+     * @param Name nombre de la imagen
+     * @param gallery nombre de la galería
+     * @param username nombre de usuario
+     * @return imageMetadataVector
+     */
     vector<string> getImageMetadata(const string Name, const string gallery, const string username);
+
 
 private:
     /**

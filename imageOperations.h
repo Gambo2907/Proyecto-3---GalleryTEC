@@ -30,8 +30,23 @@ public:
      * @param bytesArray arreglo con los bytes de la imagen.
      */
     QPixmap convertBytesArrayToImg(QList<int> bytesArray);
+    /**
+     * @brief divide el array en tres
+     * @param bytesArray bytes array
+     * @return result
+     */
     QList<QList<int>> divideListArray(QList<int> bytesArray);
+    /**
+     * @brief calcula el bloque de paridad
+     * @param bytesTriplet tripleta de bytes
+     * @return result
+     */
     QList<int> calculateParity(QList<QList<int>> bytesTriplet);
+    /**
+     * @brief guarda las partes de la imagen en los RAIDS
+     * @param bytesTriplet tripleta de bytes
+     * @param parity paridad
+     */
     void storageInRAID(QList<QList<int>> bytesTriplet, QList<int> parity);
 
 private:
