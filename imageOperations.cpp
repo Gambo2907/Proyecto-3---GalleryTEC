@@ -1,8 +1,6 @@
 #include "imageOperations.h"
 #include <QBuffer>
 #include "qdebug.h"
-#include "QFile"
-
 ImageOperations::ImageOperations() {}
 
 QList<int> ImageOperations::convertImgToBytesArray(QPixmap image) {
@@ -28,7 +26,7 @@ QPixmap ImageOperations::convertBytesArrayToImg(QList<int> bytesArray) {
         stream << x;
     }
 
-    //byte array a pixmap invertigar
+    //byte array a pixmap
     QPixmap pixmap;
     QBuffer buffer(&byteArrayNuevo);
     buffer.open(QIODevice::WriteOnly);
@@ -36,11 +34,6 @@ QPixmap ImageOperations::convertBytesArrayToImg(QList<int> bytesArray) {
 
     qDebug() << pixmap;
     return pixmap;
-
-//    QPixmap mPixmap;
-//    mPixmap.loadFromData(byteArrayNuevo,"PNG");
-//    qDebug() << mPixmap;
-//    return mPixmap;
 }
 
 QList<QList<int>> ImageOperations::divideListArray(QList<int> bytesArray) {
@@ -75,14 +68,20 @@ QList<QList<int>> ImageOperations::divideListArray(QList<int> bytesArray) {
     return result;
 }
 
-//QList<int> ImageOperations::calculateParity(QList<QList<int>> bytesTriplet) {
-//    int length = bytesTriplet[0].size();
-//    for (int i = 0; i < 3; ++i) {
-//        if (bytesTriplet[i].size()){
-//
-//        }
-//    }
-//}
+QList<int> ImageOperations::calculateParity(QList<QList<int>> bytesTriplet) {
+    int length = bytesTriplet[0].size();
+    QList<int> parity;
+    for (int i = 0; i < 3; ++i) {
+        if (bytesTriplet[i].size() >  length){
+            length = bytesTriplet[i].size();
+        }
+    }
+    for (int i = 0; i < length ; ++i) {
+        parity.append(bytesTriplet[0][i]);
+        parity.append(bytesTriplet[1][i]);
+        parity.append(bytesTriplet[2][i]);
+    }
+}
 
 void ImageOperations::storageInRAID(QList<QList<int>> bytesTriplet, QList<int> parity) { //QPixmap
 QImage RAID1 =  convertBytesArrayToImg(bytesTriplet[0]).toImage().convertToFormat(QImage::Format_ARGB32);
