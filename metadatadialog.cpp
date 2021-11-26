@@ -28,9 +28,9 @@ void MetadataDialog::setHandler(MongodbHandler *handler) {
     mainHandler = handler;
 }
 
-void MetadataDialog::setLength(int length) {
+void MetadataDialog::setLength(int length, int length_aux) {
     this->length = length;
-    this->length_aux = 0;
+    this->length_aux = length_aux;
 }
 
 void MetadataDialog::setImagesVector(std::vector<string> images) {
@@ -52,4 +52,29 @@ void MetadataDialog::setGalleryName(string galleryname) {
 MetadataDialog::~MetadataDialog()
 {
     delete ui;
+}
+
+void MetadataDialog::on_pushButton_2_clicked()
+{
+    hide();
+    parentWidget()->show();
+}
+
+void MetadataDialog::on_pushButton_clicked()
+{
+    hide();
+    EditMetadataWindow = new EditMetadataDialog(this);
+    EditMetadataWindow->setUserName(username);
+    EditMetadataWindow->setGalleryName(galleryname);
+    EditMetadataWindow->setHandler(mainHandler);
+    EditMetadataWindow->setLength(mainHandler->getGalleryImages(username,galleryname).size());
+    EditMetadataWindow->setImagesVector(mainHandler->getGalleryImages(username, galleryname));
+    EditMetadataWindow->setImagename(images[length_aux]);
+    EditMetadataWindow->showContent();
+    EditMetadataWindow->show();
+}
+
+void MetadataDialog::on_pushButton_3_clicked()
+{
+    showContent();
 }

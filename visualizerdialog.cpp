@@ -51,8 +51,9 @@ void VisualizerDialog::on_pushButton_list_clicked()
 void VisualizerDialog::on_pushButton_back_clicked()
 {
     if (length_aux >0){
-        ui->label_imageName->setText(QString::fromStdString(images[length_aux]));
         length_aux--;
+        ui->label_imageName->setText(QString::fromStdString(images[length_aux]));
+
     }else{
         qDebug() << "Se encuentra en la primera imagen";
     }
@@ -61,8 +62,9 @@ void VisualizerDialog::on_pushButton_back_clicked()
 void VisualizerDialog::on_pushButton_next_clicked()
 {
     if (length_aux < length){
-        ui->label_imageName->setText(QString::fromStdString(images[length_aux]));
         length_aux++;
+        ui->label_imageName->setText(QString::fromStdString(images[length_aux]));
+
     }else{
         qDebug() << "Se encuentra en la ultima imagen";
     }
@@ -75,7 +77,7 @@ void VisualizerDialog::on_pushButton_metadata_clicked()
     MetadataWindow->setUserName(username);
     MetadataWindow->setGalleryName(galleryname);
     MetadataWindow->setHandler(mainHandler);
-    MetadataWindow->setLength(mainHandler->getGalleryImages(username,galleryname).size());
+    MetadataWindow->setLength(length,length_aux);
     MetadataWindow->setImagesVector(mainHandler->getGalleryImages(username, galleryname));
     MetadataWindow->setImagename(images[length_aux]);
     MetadataWindow->showContent();

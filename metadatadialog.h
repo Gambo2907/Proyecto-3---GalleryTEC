@@ -12,6 +12,7 @@
 #include <QDialog>
 #include "imageOperations.h"
 #include "mongodbHandler.h"
+#include "editmetadatadialog.h"
 
 namespace Ui {
 class MetadataDialog;
@@ -50,21 +51,20 @@ public:
      * @brief muestra el contenido en pantalla
      */
     void showContent();
-    /**
-     * @brief obtiene la cantidad de imágenes que hay en la galería
-     * @param length cantidad
-     */
-    void setLength(int length);
-    /**
-     * @brief obtiene el nombre de la imagen
-     * @param imageName imagen
-     */
+    void setLength(int length, int length_aux);
     void setImagename(string imageName);
     /**
      * @brief obtiene las imágenes
      * @param images imagenes
      */
     void setImagesVector(std::vector<string> images);
+private slots:
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
+
+    void on_pushButton_3_clicked();
+
 private:
 /**
      * @brief imágenes
@@ -94,9 +94,7 @@ private:
      * @brief mainHandler Instancia de la clase MongodbHandler
      */
     MongodbHandler *mainHandler;
-    /**
-     * @brief ui Instancia de la intefaz grafica.
-     */
+    EditMetadataDialog *EditMetadataWindow;
     Ui::MetadataDialog *ui;
 };
 

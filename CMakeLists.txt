@@ -41,7 +41,10 @@ add_executable(Proyecto_3_GalleryTEC
         imageOperations.h
         metadatadialog.cpp
         metadatadialog.h
-        metadatadialog.ui)
+        metadatadialog.ui
+        editmetadatadialog.cpp
+        editmetadatadialog.h
+        editmetadatadialog.ui)
 target_link_libraries(Proyecto_3_GalleryTEC
         Qt5::Core
         Qt5::Gui
