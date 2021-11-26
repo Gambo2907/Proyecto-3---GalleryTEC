@@ -75,7 +75,9 @@ private slots:
      * @brief on_pushButton_next_clicked Valida los eventos del botón next.
      */
     void on_pushButton_next_clicked();
-
+    /**
+     * @brief on_pushButton_metadata_clicked Valida los eventos del botón metadata.
+     */
     void on_pushButton_metadata_clicked();
 
 private:
@@ -107,7 +109,9 @@ private:
      * @brief ui Instancia de la intefaz grafica.
      */
     Ui::VisualizerDialog *ui;
-
+    /**
+    *@brief MetadataWindow Instancia de la clase MetadataDialog
+    */
     MetadataDialog *MetadataWindow;
 };
 
