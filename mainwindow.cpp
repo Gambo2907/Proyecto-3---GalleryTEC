@@ -35,6 +35,9 @@ void MainWindow::on_pushButton_signIn_clicked()
         qDebug() << "Ingresando.....";
         hide();
         galleriesWindow = new GalleriesDialog(this);
+        galleriesWindow->setHandler(mainHandler);
+        galleriesWindow->setUserName(ui->lineEdit_username->text().toStdString());
+        galleriesWindow->showContent();
         galleriesWindow->show();
     }else{
         qDebug() << "Usuario o constrasegna incorrecta";

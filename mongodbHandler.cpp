@@ -14,7 +14,6 @@ bool MongodbHandler::addUserToDb(const string username, const string password) {
             << "username" << username
             << "password" << password
             << "galleries" << bsoncxx::builder::stream::open_array
-            << "v3.2" << "v3.0" << "v2.6"
             << close_array
             << bsoncxx::builder::stream::finalize;
 
@@ -70,10 +69,30 @@ bool MongodbHandler::addGallery(const string galleryName, const string username)
 
     return true;
 }
-
-bool MongodbHandler::deleteGallery(const string username, const string galleryName) {
-
-}
+//bool MongodbHandler::deleteGallery(const string username, const string galleryName) {
+//    mongocxx::collection userColl = db["UserMetadata"];
+//    auto cursor = userColl.find({});
+//    for(auto&& doc : cursor){
+//        int count = 0;
+//        bsoncxx::document::element userGalleries = doc["username"];
+//        string dbUsernameString = (string) userGalleries.get_utf8().value;
+//        if (dbUsernameString == username){
+//            userGalleries = doc["galleries"];
+//            if(userGalleries && userGalleries.type() == bsoncxx::type::k_array){
+//                bsoncxx::array::view galleries{userGalleries.get_array().value};
+//                for (bsoncxx::array::element subdocument : galleries){
+//                    string name = (string) subdocument.get_utf8().value;
+//                    if(name == galleryName){
+//                        userColl.delete_one(make_document(kvp("galleries",galleries[count])));
+//                        return true;
+//                    }
+//                    count++;
+//                }
+//            }
+//        }
+//    }
+//    return false;
+//}
 
 bool MongodbHandler::addImage(const string username, const string galleryName, const string imageName) {
     mongocxx::collection imgColl = db["ImgMetadata"];

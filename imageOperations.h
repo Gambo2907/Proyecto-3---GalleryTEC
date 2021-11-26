@@ -29,9 +29,10 @@ public:
      * @brief convierte un arreglo de bytes en imagen.
      * @param bytesArray arreglo con los bytes de la imagen.
      */
-    void convertBytesArrayToImg(QList<int> bytesArray);
+    QPixmap convertBytesArrayToImg(QList<int> bytesArray);
     QList<QList<int>> divideListArray(QList<int> bytesArray);
     QList<int> calculateParity(QList<QList<int>> bytesTriplet);
+    void storageInRAID(QList<QList<int>> bytesTriplet, QList<int> parity);
 
 private:
 

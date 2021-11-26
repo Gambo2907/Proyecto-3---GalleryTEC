@@ -39,4 +39,6 @@ void RegisterDialog::on_pushButton_register_clicked()
     }else{
         qDebug() <<  "No se puedo registrar el usuario";
     }
+    ui->lineEdit_username->clear();
+    ui->lineEdit_password->clear();
 }

@@ -1,28 +1,46 @@
 #include "imageOperations.h"
 #include <QBuffer>
 #include "qdebug.h"
+#include "QFile"
 
 ImageOperations::ImageOperations() {}
 
 QList<int> ImageOperations::convertImgToBytesArray(QPixmap image) {
     QList<int> bytesArray;
+
     QByteArray ba;
     QBuffer buffer(&ba);
     buffer.open(QIODevice::WriteOnly);
     image.save(&buffer,"PNG");
+
     for(int i = 0; i < ba.size(); i++){
         bytesArray.append(int(ba[i]));
     }
-    //qDebug()<<bytesArray;
+    //qDebug() << bytesArray;
+    //qDebug() << ba;
     return bytesArray;
 }
 
-void ImageOperations::convertBytesArrayToImg(QList<int> bytesArray) {
+QPixmap ImageOperations::convertBytesArrayToImg(QList<int> bytesArray) {
     QByteArray byteArrayNuevo;
     QDataStream stream(&byteArrayNuevo,QIODevice::WriteOnly);
     for(auto x : bytesArray){
         stream << x;
     }
+
+    //byte array a pixmap invertigar
+    QPixmap pixmap;
+    QBuffer buffer(&byteArrayNuevo);
+    buffer.open(QIODevice::WriteOnly);
+    pixmap.save(&buffer, "PNG");
+
+    qDebug() << pixmap;
+    return pixmap;
+
+//    QPixmap mPixmap;
+//    mPixmap.loadFromData(byteArrayNuevo,"PNG");
+//    qDebug() << mPixmap;
+//    return mPixmap;
 }
 
 QList<QList<int>> ImageOperations::divideListArray(QList<int> bytesArray) {
@@ -54,16 +72,23 @@ QList<QList<int>> ImageOperations::divideListArray(QList<int> bytesArray) {
     result.append(p1);
     result.append(p2);
     result.append(p3);
-    qDebug() << result[0];
-    qDebug() << result[1];
-    qDebug() << result[2];
-    //qDebug() << result;
     return result;
 }
 
-QList<int> ImageOperations::calculateParity(QList<QList<int>> bytesTriplet) {
-    int length = bytesTriplet[0].size();
-    for (int i = 0; i < 3; ++i) {
-    }
+//QList<int> ImageOperations::calculateParity(QList<QList<int>> bytesTriplet) {
+//    int length = bytesTriplet[0].size();
+//    for (int i = 0; i < 3; ++i) {
+//        if (bytesTriplet[i].size()){
+//
+//        }
+//    }
+//}
+
+void ImageOperations::storageInRAID(QList<QList<int>> bytesTriplet, QList<int> parity) { //QPixmap
+QImage RAID1 =  convertBytesArrayToImg(bytesTriplet[0]).toImage().convertToFormat(QImage::Format_ARGB32);
+QImage RAID2 = convertBytesArrayToImg(bytesTriplet[1]).toImage().convertToFormat(QImage::Format_ARGB32);
+QImage RAID3 = convertBytesArrayToImg(bytesTriplet[2]).toImage().convertToFormat(QImage::Format_ARGB32);
+QImage RAID4 = convertBytesArrayToImg(parity).toImage().convertToFormat(QImage::Format_ARGB32);
 
 }
+

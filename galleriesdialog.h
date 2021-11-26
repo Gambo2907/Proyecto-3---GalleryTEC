@@ -11,6 +11,7 @@
 
 #include <QDialog>
 #include "imagesdialog.h"
+#include "mongodbHandler.h"
 
 namespace Ui {
 class GalleriesDialog;
@@ -31,6 +32,10 @@ public:
     explicit GalleriesDialog(QWidget *parent = nullptr);
     ~GalleriesDialog();
 
+    void setHandler(MongodbHandler *handler);
+    void setUserName(string username);
+    void showContent();
+
 private slots:
     /**
      * @brief on_pushButton_GSelect_clicked Valida los eventos del boton select.
@@ -41,7 +46,12 @@ private slots:
      */
     void on_pushButton_Gback_clicked();
 
+    void on_pushButton_GAdd_clicked();
+
+
 private:
+    string username;
+    MongodbHandler *mainHandler;
     /**
      * @brief imageWindow instancia de la clase ImagesDialog
      */

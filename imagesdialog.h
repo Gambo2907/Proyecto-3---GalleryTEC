@@ -12,6 +12,7 @@
 #include <QDialog>
 #include "visualizerdialog.h"
 #include "imageOperations.h"
+#include "mongodbHandler.h"
 
 namespace Ui {
     class ImagesDialog;
@@ -33,6 +34,11 @@ public:
     explicit ImagesDialog(QWidget *parent = nullptr);
     ~ImagesDialog();
 
+    void setHandler(MongodbHandler *handler);
+    void setUserName(string username);
+    void setGalleryName(string galleryname);
+    void showContent();
+
 private slots:
     /**
      * @brief on_pushButton_Iback_clicked Valida los eventos del boton back.
@@ -47,7 +53,12 @@ private slots:
      */
     void on_pushButton_IAdd_clicked();
 
+    void on_pushButton_IDelete_clicked();
+
 private:
+    string username;
+    string galleryname;
+    MongodbHandler *mainHandler;
     /**
      * @brief imageOperations instancia de la clase ImagesOperations.
      */

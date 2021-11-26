@@ -10,6 +10,9 @@
 #define VISUALIZERDIALOG_H
 
 #include <QDialog>
+#include "visualizerdialog.h"
+#include "imageOperations.h"
+#include "mongodbHandler.h"
 
 namespace Ui {
 class VisualizerDialog;
@@ -30,13 +33,30 @@ public:
     explicit VisualizerDialog(QWidget *parent = nullptr);
     ~VisualizerDialog();
 
+    void setHandler(MongodbHandler *handler);
+    void setUserName(string username);
+    void setGalleryName(string galleryname);
+    void showContent();
+    void setLength(int length);
+    void setImagesVector(std::vector<string> images);
+
 private slots:
     /**
      * @brief on_pushButton_list_clicked Valida los eventos del botón list.
      */
     void on_pushButton_list_clicked();
 
+    void on_pushButton_back_clicked();
+
+    void on_pushButton_next_clicked();
+
 private:
+    std::vector<string> images;
+    int length;
+    int length_aux;
+    string username;
+    string galleryname;
+    MongodbHandler *mainHandler;
     /**
      * @brief ui Instancia de la intefaz grafica.
      */

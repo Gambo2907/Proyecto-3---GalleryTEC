@@ -48,37 +48,43 @@ background: white
   <widget class="QLabel" name="label_galleryName">
    <property name="geometry">
     <rect>
-     <x>320</x>
+     <x>310</x>
      <y>10</y>
-     <width>171</width>
+     <width>201</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>15</pointsize>
+     <pointsize>20</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>GALLERY NAME</string>
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="label_imageName">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>320</x>
      <y>470</y>
-     <width>141</width>
-     <height>21</height>
+     <width>161</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <pointsize>15</pointsize>
+     <pointsize>20</pointsize>
     </font>
    </property>
    <property name="text">
-    <string>IMAGE NAME</string>
+    <string/>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_back">

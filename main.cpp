@@ -10,9 +10,9 @@ int main(int argc, char *argv[])
    MongodbHandler mainHandler;
 //   vector<string> vector = mainHandler.getUserGalleries("axel");
 //   mainHandler.addGallery("prueba","axel");
-//    mainHandler.deleteGallery("axel","prueba"); //no funciona
 //    mainHandler.addImage("axel","prueba","sdfsdsdf");
 //    mainHandler.deleteImage("prueba","perro","axel");
+
 //    vector<string> vector = mainHandler.getGalleryImages("axel","prueba");
 //    mainHandler.setImageMetadata("perro","prueba","Author","Author","axel");
 //    vector<string> vector = mainHandler.getImageMetadata("perro","prueba","axel");  //(name,author,year,size,description)

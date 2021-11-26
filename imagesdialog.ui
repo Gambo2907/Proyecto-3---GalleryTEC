@@ -98,7 +98,7 @@ background: white
   <widget class="QPushButton" name="pushButton_IDelete">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>20</x>
      <y>110</y>
      <width>80</width>
      <height>23</height>
@@ -129,7 +129,7 @@ background: white
   <widget class="QPushButton" name="pushButton_IAdd">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>140</x>
      <y>110</y>
      <width>80</width>
      <height>23</height>
@@ -150,6 +150,16 @@ background: white
    </property>
    <property name="text">
     <string>Back</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_imageName">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>110</y>
+     <width>113</width>
+     <height>23</height>
+    </rect>
    </property>
   </widget>
  </widget>
