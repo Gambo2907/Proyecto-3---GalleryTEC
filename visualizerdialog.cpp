@@ -2,6 +2,7 @@
 #include "ui_visualizerdialog.h"
 #include "QDebug"
 
+
 VisualizerDialog::VisualizerDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::VisualizerDialog)
@@ -65,4 +66,18 @@ void VisualizerDialog::on_pushButton_next_clicked()
     }else{
         qDebug() << "Se encuentra en la ultima imagen";
     }
+}
+
+void VisualizerDialog::on_pushButton_metadata_clicked()
+{
+    hide();
+    MetadataWindow = new MetadataDialog(this);
+    MetadataWindow->setUserName(username);
+    MetadataWindow->setGalleryName(galleryname);
+    MetadataWindow->setHandler(mainHandler);
+    MetadataWindow->setLength(mainHandler->getGalleryImages(username,galleryname).size());
+    MetadataWindow->setImagesVector(mainHandler->getGalleryImages(username, galleryname));
+    MetadataWindow->setImagename(images[length_aux]);
+    MetadataWindow->showContent();
+    MetadataWindow->show();
 }

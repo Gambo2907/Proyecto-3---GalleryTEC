@@ -10,9 +10,9 @@
 #define VISUALIZERDIALOG_H
 
 #include <QDialog>
-#include "visualizerdialog.h"
 #include "imageOperations.h"
 #include "mongodbHandler.h"
+#include "metadatadialog.h"
 
 namespace Ui {
 class VisualizerDialog;
@@ -76,6 +76,8 @@ private slots:
      */
     void on_pushButton_next_clicked();
 
+    void on_pushButton_metadata_clicked();
+
 private:
     /**
      * @brief imágenes
@@ -105,6 +107,8 @@ private:
      * @brief ui Instancia de la intefaz grafica.
      */
     Ui::VisualizerDialog *ui;
+
+    MetadataDialog *MetadataWindow;
 };
 
 #endif // VISUALIZERDIALOG_H
