@@ -51,7 +51,15 @@ public:
      * @brief muestra el contenido en pantalla
      */
     void showContent();
+    /**
+     * @brief obtiene la cantidad de imágenes que hay en la galería
+     * @param length cantidad
+     */
     void setLength(int length, int length_aux);
+    /**
+     * @brief obtiene el nombre de las imágenes
+     * @param imageName nombre de la imagen
+     */
     void setImagename(string imageName);
     /**
      * @brief obtiene las imágenes
@@ -59,10 +67,17 @@ public:
      */
     void setImagesVector(std::vector<string> images);
 private slots:
+/**
+     * @brief on_pushButton_2_clicked Valida los eventos del botón clicked.
+     */
     void on_pushButton_2_clicked();
-
+/**
+     * @brief on_pushButton_clicked Valida los eventos del botón clicked.
+     */
     void on_pushButton_clicked();
-
+/**
+     * @brief on_pushButton_3_clicked Valida los eventos del botón clicked.
+     */
     void on_pushButton_3_clicked();
 
 private:
@@ -94,7 +109,13 @@ private:
      * @brief mainHandler Instancia de la clase MongodbHandler
      */
     MongodbHandler *mainHandler;
+    /**
+     * @brief EditMetadataWindow Instancia de la clase EditMetadataDialog
+     */
     EditMetadataDialog *EditMetadataWindow;
+    /**
+     * @brief ui Instancia de la intefaz grafica.
+     */
     Ui::MetadataDialog *ui;
 };
 
